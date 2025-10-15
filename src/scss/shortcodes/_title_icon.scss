@@ -1,0 +1,14 @@
+.title_icon{
+  @include font-size(20px);
+  font-family: $headings-font-family;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .bi{
+    color: $blue;
+    font-size: 28px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,68 @@
+{
+    "key": "group_faq_fields",
+    "title": "FAQ - Question/Réponse",
+    "fields": [
+        {
+            "key": "field_faq_question",
+            "label": "Question",
+            "name": "question",
+            "type": "text",
+            "instructions": "La question (4 lignes max recommandé)",
+            "required": 1,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Quels sont les avantages de...",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_faq_reponse",
+            "label": "Réponse",
+            "name": "reponse",
+            "type": "textarea",
+            "instructions": "La réponse (lignes multiples)",
+            "required": 1,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "faq"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour les questions FAQ",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

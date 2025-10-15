@@ -1,0 +1,104 @@
+{
+    "key": "group_mission_fields",
+    "title": "Mission - Informations",
+    "fields": [
+        {
+            "key": "field_mission_titre",
+            "label": "Titre de la mission",
+            "name": "titre_mission",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Si vide, le titre du post sera utilisé",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Gestion de copropriété",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_mission_description",
+            "label": "Description courte",
+            "name": "description_mission",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description affichée sur la carte (max 150 caractères recommandé)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Décrivez brièvement la mission...",
+            "maxlength": 200,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_mission_icone",
+            "label": "Icône",
+            "name": "icon_mission",
+            "aria-label": "",
+            "type": "icon-picker",
+            "instructions": "Choisir une icône pour la mission",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "initial_value": ""
+        },
+        {
+            "key": "field_mission_lien",
+            "label": "Lien de la page",
+            "name": "lien_mission",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Si vide, le lien du post sera utilisé",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "mission"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour le CPT Mission",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

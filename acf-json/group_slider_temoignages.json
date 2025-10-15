@@ -1,0 +1,135 @@
+{
+    "key": "group_slider_temoignages",
+    "title": "Slider Témoignages",
+    "fields": [
+        {
+            "key": "field_slider_titre_composant",
+            "label": "Titre du slider",
+            "name": "slider_temoignages_titre",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre affiché en haut de la section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nos clients témoignent",
+            "placeholder": "Ex. Nos clients nous recommandent",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_slider_select_realisations",
+            "label": "Réalisations à afficher",
+            "name": "slider_temoignages_selecteur",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Sélectionnez les réalisations contenant un témoignage. Seules celles avec un témoignage rempli seront affichées.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "realisation"
+            ],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 0,
+            "return_format": "id",
+            "taxonomy": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_slider_cta",
+            "label": "Bouton CTA (optionnel)",
+            "name": "slider_temoignages_cta",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Bouton affiché sous le slider",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_slider_cta_texte",
+                    "label": "Texte du bouton",
+                    "name": "texte",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Ex. Voir toutes nos réalisations",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_slider_cta_lien",
+                    "label": "Lien du bouton",
+                    "name": "lien",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Slider de témoignages basé sur les réalisations",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

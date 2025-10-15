@@ -1,0 +1,42 @@
+.video-shortcode {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+
+  &:after {
+    font-size: 45px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    content: "\F4F4";
+    font-family: bootstrap-icons;
+    width: 64px;
+    height: 64px;
+    background: $white;
+    color: $bleu-secondaire;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(
+      0 10%,
+      4px 0,
+      calc(100% - 4px) 0,
+      100% 4px,
+      100% calc(100% - 4px),
+      calc(100% - 4px) 100%,
+      4px 100%,
+      0% calc(100% - 4px),
+      0% 4px
+    );
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .video-shortcode {
+    padding: 0;
+  }
+}

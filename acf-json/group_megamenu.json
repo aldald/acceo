@@ -1,0 +1,107 @@
+{
+    "key": "group_megamenu_settings",
+    "title": "Mega Menu Settings",
+    "fields": [
+        {
+            "key": "field_enable_megamenu",
+            "label": "Activer le Mega Menu",
+            "name": "enable_megamenu",
+            "type": "true_false",
+            "default_value": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_megamenu_columns",
+            "label": "Colonnes du Mega Menu",
+            "name": "megamenu_columns",
+            "type": "repeater",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_enable_megamenu",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "layout": "block",
+            "button_label": "Ajouter une colonne",
+            "sub_fields": [
+                {
+                    "key": "field_column_title",
+                    "label": "Titre de la colonne",
+                    "name": "column_title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_column_items",
+                    "label": "Éléments",
+                    "name": "column_items",
+                    "type": "repeater",
+                    "layout": "table",
+                    "button_label": "Ajouter un élément",
+                    "sub_fields": [
+                        {
+                            "key": "field_item_icon",
+                            "label": "Icône",
+                            "name": "item_icon",
+                            "type": "image",
+                            "return_format": "array",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_item_title",
+                            "label": "Titre",
+                            "name": "item_title",
+                            "type": "text",
+                            "required": 1
+                        },
+                        {
+                            "key": "field_item_link",
+                            "label": "Lien",
+                            "name": "item_link",
+                            "type": "link",
+                            "required": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_megamenu_width",
+            "label": "Largeur du Mega Menu",
+            "name": "megamenu_width",
+            "type": "select",
+            "choices": {
+                "full": "Pleine largeur",
+                "container": "Largeur du container",
+                "custom": "Personnalisée"
+            },
+            "default_value": "container",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_enable_megamenu",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

@@ -1,0 +1,173 @@
+{
+    "key": "group_realisation_fields",
+    "title": "Réalisation - Informations",
+    "fields": [
+        {
+            "key": "field_realisation_lien",
+            "label": "Lien",
+            "name": "lien",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Lien externe ou interne (optionnel)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_realisation_titre",
+            "label": "Titre de la réalisation",
+            "name": "titre_realisation",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Si vide, le titre du post sera utilisé",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Résidence Le Jardin des Lilas",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_realisation_description",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description courte de la réalisation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_realisation_temoignage",
+            "label": "Témoignages",
+            "name": "temoignage",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Citation du client (sera affichée dans le slider témoignages)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "« L'audit énergétique de l'Association Mérignac Ville a été mené par ACCEO avec qualité... »",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_realisation_temoignage_auteur",
+            "label": "Auteur du témoignage",
+            "name": "temoignage_auteur",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Nom de la personne",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: John Doe",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_realisation_temoignage_fonction",
+            "label": "Fonction de l'auteur",
+            "name": "temoignage_fonction",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Poste ou titre",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Property manager",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_realisation_logo",
+            "label": "Image (logo)",
+            "name": "image_logo_realisation",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Logo de l'entreprise ou image représentative",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "realisation"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour les réalisations",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

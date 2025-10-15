@@ -1,0 +1,30 @@
+{
+    "key": "group_megamenu_settings",
+    "title": "Options Mega Menu",
+    "fields": [
+        {
+            "key": "field_enable_megamenu",
+            "label": "Activer le Mega Menu",
+            "name": "enable_megamenu",
+            "type": "true_false",
+            "instructions": "Activer le mega menu pour cet élément",
+            "default_value": 0,
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

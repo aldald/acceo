@@ -1,0 +1,60 @@
+{
+    "key": "group_653625ced6f54",
+    "title": "Séparateur",
+    "fields": [
+        {
+            "key": "field_653625d0b8cab",
+            "label": "Couleur",
+            "name": "couleur",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "color_label",
+            "display": "palette",
+            "color_picker": 0,
+            "allow_null": 0,
+            "theme_colors": 0,
+            "colors": {
+                "#ffffff": "white"
+            },
+            "button_label": "Sélectionner une couleur",
+            "absolute": false,
+            "input": true
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1698047684
+}

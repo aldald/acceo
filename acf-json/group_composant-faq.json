@@ -1,0 +1,167 @@
+{
+    "key": "group_composant_faq",
+    "title": "FAQ",
+    "fields": [
+        {
+            "key": "field_faq_titre",
+            "label": "Titre",
+            "name": "faq_titre",
+            "type": "text",
+            "instructions": "Utilisez [blue], [orange], [dark] pour colorer des mots. Ex: Questions [blue]fréquentes[/blue]",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Questions [blue]fréquentes[/blue]",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_faq_description",
+            "label": "Description",
+            "name": "faq_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_faq_image",
+            "label": "Image de décoration (gauche)",
+            "name": "faq_image",
+            "type": "image",
+            "instructions": "Image affichée à gauche (ex: triangle jaune)",
+            "required": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_faq_background_image",
+            "label": "Image de fond (droite)",
+            "name": "faq_background_image",
+            "type": "image",
+            "instructions": "Image affichée en fond à droite (ex: immeuble)",
+            "required": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_faq_bouton",
+            "label": "Bouton CTA",
+            "name": "faq_bouton",
+            "type": "group",
+            "instructions": "Bouton affiché sous la description (optionnel)",
+            "required": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_faq_bouton_texte",
+                    "label": "Texte",
+                    "name": "texte",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Ex: Voir toute la FAQ"
+                },
+                {
+                    "key": "field_faq_bouton_url",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://"
+                }
+            ]
+        },
+        {
+            "key": "field_faq_questions",
+            "label": "Questions à afficher",
+            "name": "faq_questions",
+            "type": "relationship",
+            "instructions": "Sélectionnez les questions FAQ à afficher",
+            "required": 1,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "faq"
+            ],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 0,
+            "return_format": "id",
+            "taxonomy": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Section FAQ avec accordéon",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000001
+}

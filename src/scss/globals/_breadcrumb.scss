@@ -1,0 +1,28 @@
+li.breadcrumb-item a {
+  color: $bleu-principal;
+}
+.breadcrumb-wrapper {
+  padding-top: 200px;
+}
+
+.breadcrumb-separator {
+  width: 16px;
+  height: 16px;
+  margin: 0 0.5rem;
+  opacity: 0.6;
+  vertical-align: middle;
+  display: inline-block;
+}
+.breadcrumb-item {
+  color: inherit;
+}
+
+.breadcrumb-separator path {
+  fill: currentColor;
+}
+
+@media only screen and (max-width: 1199px) {
+  .breadcrumb-wrapper {
+    padding-top: 100px;
+  }
+}

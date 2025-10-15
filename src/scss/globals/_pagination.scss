@@ -1,0 +1,58 @@
+a.page-link {
+  width: 48px;
+  height: 48px;
+  background: $blanc;
+  border: none;
+  border-radius: 50%;
+  color: $bleu-principal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid $bleu-principal;
+}
+
+li.page-item.active {
+  width: 48px;
+  height: 48px;
+  background: $bleu-principal;
+  border: none;
+  border-radius: 50%;
+  color: $blanc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid $bleu-principal;
+}
+
+ul.pagination {
+  margin-top: 24px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+  gap: 32px;
+}
+span.page-link.current {
+  background: none;
+  border: none;
+}
+
+a.btn.btn-nav.btn-prev,
+a.btn.btn-nav.btn-next {
+  width: 48px;
+  height: 48px;
+  background: $bleu-principal;
+  border: none;
+  border-radius: 50%;
+  color: $blanc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid $bleu-principal;
+}

@@ -1,0 +1,50 @@
+.table-full-responsive{
+  thead{
+    color: $primary;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .table-full-responsive{
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+    }
+
+    table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}

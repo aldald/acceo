@@ -1,0 +1,203 @@
+// ============================================
+// Card Cible - Composant "Vous êtes"
+// ============================================
+
+.vous-etes-section {
+  padding: 48px 0 100px 0;
+  background: $bg;
+  position: relative;
+}
+
+.title-heading {
+  margin-bottom: 35px;
+
+  h2 {
+    color: $bleu-principal;
+    font-size: 42px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.vous-etes-section .title-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ============================================
+// Navigation Carrousel
+// ============================================
+
+.carrousel-navigation {
+  display: flex;
+  gap: 12px;
+}
+
+.carrousel-btn {
+  width: 48px;
+  height: 48px;
+  background: $bleu-principal;
+  border: none;
+  border-radius: 50%;
+  color: $blanc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $bleu-secondaire;
+    transform: scale(1.05);
+  }
+
+  &:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.5;
+  }
+}
+
+// ============================================
+// Carrousel
+// ============================================
+
+.carrousel-container {
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px;
+}
+
+.carrousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 24px;
+  justify-content: center;
+
+  @media (max-width: 991px) {
+    gap: 16px;
+  }
+}
+
+// ============================================
+// Cartes
+// ============================================
+
+.vous-etes-carte {
+  flex: 0 0 302px;
+  background: $blanc;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+  }
+}
+
+.vous-etes-section:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url(/wp-content/uploads/2025/10/chevron-bg.png);
+  background-repeat: repeat-x;
+  background-position: 100% 85%;
+  background-size: 50px 50px;
+  z-index: 0;
+  left: 20%;
+}
+
+.carte-image-wrapper {
+  height: 222px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+}
+
+.vous-etes-carte:hover .carte-image-wrapper img {
+  transform: scale(1.08);
+}
+
+.carte-content-wrapper {
+  padding: 24px;
+  text-align: left;
+}
+
+.carte-titre-modern {
+  font-size: 24px;
+  font-weight: 500;
+  color: $bleu-principal;
+  margin-bottom: 0;
+  line-height: 1.2;
+  min-height: 58px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  color: $bleu-secondaire;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $bleu-principal;
+    gap: 0;
+
+    .btn-icon {
+      transform: translateX(4px);
+    }
+  }
+
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+
+@media only screen and (max-width: 1199px) {
+  .carte-titre-modern {
+    font-size: 22px;
+  }
+
+  .carrousel-container {
+    margin-bottom: 0;
+  }
+
+  .vous-etes-section {
+    padding: 64px 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 860px) {
+}
+
+@media only screen and (max-width: 576px) {
+  .title-heading .h2, .title-heading h2 {
+    font-size: 28px !important;
+  }
+}

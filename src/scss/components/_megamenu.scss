@@ -1,0 +1,159 @@
+// _megamenu.scss
+.nav-item.has-megamenu {
+  position: static !important;
+
+  &.vous-etes-menu {
+    > .nav-link {
+      .bi-chevron-down {
+        font-size: 10px;
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover .bi-chevron-down {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.mega-menu-wrapper {
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $blanc;
+  z-index: 9999;
+  padding: 0 0 16px 0;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.nav-item.has-megamenu:hover .mega-menu-wrapper {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-menu-content {
+  .service-card-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+  }
+
+  .service-card {
+    background: $bg;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: left;
+    height: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: $bg_fonce;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(5, 53, 78, 0.1);
+
+      .service-icon {
+        transform: scale(1.1);
+      }
+
+      h4 {
+        color: $bleu-secondaire;
+      }
+    }
+
+    &.highlighted {
+      background: linear-gradient(135deg, #dbe9f0 0%, #e6f3f8 100%);
+      border: 1px solid #b3d9e8;
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      margin-right: 12px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      i {
+        font-size: 28px;
+        color: #05354e;
+      }
+    }
+
+    h4 {
+      color: $bleu-principal;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0 0 8px 0;
+    }
+
+    .service-description {
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.4;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-nav {
+    .nav-item {
+      &.menu-item-has-children {
+        > a.nav-link {
+          position: relative;
+          padding-right: 60px;
+        }
+      }
+      .dropdown-menu {
+        background: #f0f8fb;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px 0;
+
+        li {
+          margin: 0;
+
+          a {
+            display: block;
+            padding: 12px 20px 12px 30px;
+            color: #464646;
+            font-size: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.2s ease;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.5);
+              color: $bleu-principal;
+              padding-left: 35px;
+            }
+          }
+
+          &:last-child a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

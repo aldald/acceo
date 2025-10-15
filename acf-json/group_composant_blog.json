@@ -1,0 +1,173 @@
+{
+  "key": "group_blog_section",
+  "title": "Listing Blog",
+  "fields": [
+    {
+      "key": "field_blog_titre",
+      "label": "Titre composant",
+      "name": "blog_titre",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Supporte les couleurs : [blue]Nos[/blue] conseils",
+      "required": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "[blue]Nos[/blue] conseils",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_blog_chapo",
+      "label": "Chapô composant",
+      "name": "blog_chapo",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Texte d'introduction (optionnel)",
+      "required": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 3,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_blog_mode_selection",
+      "label": "Mode de sélection des articles",
+      "name": "blog_mode_selection",
+      "aria-label": "",
+      "type": "radio",
+      "instructions": "Choisir entre les 3 derniers articles ou une sélection manuelle",
+      "required": 1,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "auto": "Afficher les 3 derniers articles",
+        "manuel": "Sélectionner manuellement 3 articles"
+      },
+      "default_value": "auto",
+      "layout": "vertical",
+      "return_format": "value",
+      "other_choice": 0,
+      "save_other_choice": 0,
+      "allow_null": 0
+    },
+    {
+      "key": "field_blog_selecteur_articles",
+      "label": "Sélecteur d'articles",
+      "name": "blog_selecteur_articles",
+      "aria-label": "",
+      "type": "relationship",
+      "instructions": "Sélectionnez exactement 3 articles à afficher",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_blog_mode_selection",
+            "operator": "==",
+            "value": "manuel"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["post"],
+      "post_status": ["publish"],
+      "taxonomy": [],
+      "filters": ["search", "post_type", "taxonomy"],
+      "return_format": "id",
+      "min": 3,
+      "max": 3,
+      "elements": "",
+      "bidirectional_target": []
+    },
+    {
+      "key": "field_blog_cta",
+      "label": "Bouton CTA",
+      "name": "blog_cta",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "Bouton \"Voir tous nos conseils\"",
+      "required": 0,
+
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_blog_cta_texte",
+          "label": "Texte du bouton",
+          "name": "texte",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Voir tout nos conseils",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_blog_cta_lien",
+          "label": "Lien du bouton",
+          "name": "lien",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "https://"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ]
+  ],
+  "menu_order": 10,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Section d'affichage des articles de blog (conseils)",
+  "show_in_rest": 0
+}

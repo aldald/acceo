@@ -1,0 +1,257 @@
+{
+    "key": "group_reassurance",
+    "title": "Réassurance",
+    "fields": [
+        {
+            "key": "field_reassurance_titre",
+            "label": "Titre de la section",
+            "name": "titre",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Utilisez [blue], [orange], [dark] pour colorer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ACCEO en\nquelques chiffres",
+            "rows": 3,
+            "placeholder": "",
+            "maxlength": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_reassurance_contenu",
+            "label": "Texte descriptif",
+            "name": "contenu",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_reassurance_background",
+            "label": "Image de fond (optionnelle)",
+            "name": "background",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_reassurance_boxes",
+            "label": "Boxes (Chiffres & Images)",
+            "name": "boxes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 12,
+            "layout": "block",
+            "button_label": "Ajouter une box",
+            "collapsed": "field_reassurance_box_type",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_reassurance_box_type",
+                    "label": "Type de box",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "chiffre": "Chiffre clé (Icône + Valeur + Label)",
+                        "image": "Image seule"
+                    },
+                    "default_value": "chiffre",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_reassurance_boxes"
+                },
+                {
+                    "key": "field_reassurance_box_icone",
+                    "label": "Icône",
+                    "name": "icone",
+                    "aria-label": "",
+                    "type": "icon-picker",
+                    "instructions": "Choisir une icône",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_reassurance_box_type",
+                                "operator": "==",
+                                "value": "chiffre"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "initial_value": "",
+                    "parent_repeater": "field_reassurance_boxes"
+                },
+                {
+                    "key": "field_reassurance_box_chiffre",
+                    "label": "Chiffre / Valeur",
+                    "name": "chiffre",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ex: 8500, 93%, 1500h",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_reassurance_box_type",
+                                "operator": "==",
+                                "value": "chiffre"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "8500",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_reassurance_boxes"
+                },
+                {
+                    "key": "field_reassurance_box_label",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_reassurance_box_type",
+                                "operator": "==",
+                                "value": "chiffre"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "clients",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_reassurance_boxes"
+                },
+                {
+                    "key": "field_reassurance_box_image",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_reassurance_box_type",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_reassurance_boxes"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

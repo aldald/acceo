@@ -1,0 +1,55 @@
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/wp-content/index.php
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+
+# Configuration
+wp-config.php
+.htaccess
+
+# Uploads
+/wp-content/uploads/
+
+/wp-content/plugins/*
+!/wp-content/plugins/your-custom-plugin/
+
+/wp-content/themes/*
+!/wp-content/themes/churchill/
+
+# Cache
+/wp-content/cache/
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+
+# Backups
+*.sql
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+error_log
+debug.log
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+node_modules/
+package-lock.json
+
+.env
+.env.local

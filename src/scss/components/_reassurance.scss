@@ -1,0 +1,315 @@
+// ============================================
+// Réassurance - Composant
+// ============================================
+
+// Variables locales
+$reassurance-padding-desktop: 120px;
+$reassurance-padding-tablet: 80px;
+$reassurance-padding-mobile: 60px;
+
+.reassurance-section {
+  position: relative;
+  padding: $reassurance-padding-desktop 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.reassurance-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.85fr;
+  gap: 132px;
+  align-items: start;
+  max-width: 1280px;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+// ============================================
+// Colonne Gauche : Titre + Texte
+// ============================================
+
+.reassurance-section .title-heading {
+  h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: $bleu-principal;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+}
+
+.reassurance-texte {
+  margin-bottom: 0;
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: $bleu-principal;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ============================================
+// Grille de Boxes
+// ============================================
+
+.reassurance-boxes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+// ============================================
+// Box Commune
+// ============================================
+
+.reassurance-box {
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+
+  // Classes d'animation
+  &.fade-ready {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  &.animated.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    min-height: 180px;
+  }
+
+  &.animated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba($bleu-principal, 0.15);
+  }
+
+  .no-js & {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ============================================
+// BOX TYPE : Chiffre Clé
+// ============================================
+
+.reassurance-box-chiffre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $bg;
+  aspect-ratio: 1 / 1;
+  max-width: 229px;
+  width: 100%;
+  justify-content: center;
+  will-change: transform, opacity;
+
+  .box-icon {
+    margin-bottom: 8px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $bleu-secondaire;
+    }
+  }
+
+  .box-chiffre {
+    font-size: 35px;
+    font-weight: 700;
+    color: $bleu-principal;
+    line-height: 1;
+    margin: 5px 0 3px 0;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    font-variant-numeric: tabular-nums;
+
+    &.counted {
+      animation: pulseNumber 0.3s ease;
+    }
+  }
+
+  .box-label {
+    font-size: 20px;
+    color: $bleu-principal;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+// ============================================
+// BOX TYPE : Image
+// ============================================
+
+.reassurance-box-image {
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+
+  .box-image-wrapper {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      max-width: 100%;
+    }
+  }
+
+  &.animated:hover img {
+    transform: scale(1.05);
+  }
+}
+
+// ============================================
+// Animation
+// ============================================
+
+@keyframes pulseNumber {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// ============================================
+// RESPONSIVE - Tablette (1200px)
+// ============================================
+
+@media only screen and (max-width: 1199px) {
+  .reassurance-grid {
+    gap: 60px;
+  }
+
+  .reassurance-boxes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .reassurance-box-chiffre {
+    max-width: 100%;
+  }
+}
+
+// ============================================
+// RESPONSIVE - Tablette Portrait (991px)
+// ============================================
+
+@media only screen and (max-width: 991px) {
+  .reassurance-section {
+    padding: $reassurance-padding-tablet 0;
+  }
+
+  .reassurance-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+
+    .title-heading {
+      margin-bottom: 0;
+    }
+  }
+
+  .reassurance-section .title-heading h2 {
+    font-size: 36px;
+  }
+}
+
+// ============================================
+// RESPONSIVE - Mobile (767px)
+// ============================================
+
+@media only screen and (max-width: 767px) {
+  .reassurance-section {
+    padding: $reassurance-padding-mobile 15px;
+
+    .container {
+      padding: 0;
+      overflow-x: hidden;
+    }
+  }
+
+  .reassurance-section .title-heading h2 {
+    font-size: 28px;
+  }
+
+  .reassurance-boxes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .reassurance-box {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .reassurance-box-chiffre {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: auto;
+    min-height: 150px;
+    padding: 20px;
+
+    .box-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .box-chiffre {
+      font-size: 28px;
+      min-height: 36px;
+    }
+
+    .box-label {
+      font-size: 16px;
+    }
+  }
+}
+
+// ============================================
+// RESPONSIVE - Petit Mobile (480px)
+// ============================================
+
+@media only screen and (max-width: 480px) {
+  .reassurance-boxes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .reassurance-box {
+    padding: 0;
+  }
+
+  .reassurance-box-chiffre {
+    min-height: 140px;
+    padding: 16px;
+
+    .box-chiffre {
+      font-size: 24px;
+      min-height: 32px;
+    }
+
+    .box-label {
+      font-size: 14px;
+    }
+  }
+}

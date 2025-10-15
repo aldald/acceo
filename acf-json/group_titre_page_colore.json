@@ -1,0 +1,51 @@
+{
+    "key": "group_titre_page_colore",
+    "title": "Titre coloré de la page",
+    "fields": [
+        {
+            "key": "field_titre_page_colore",
+            "label": "Titre avec couleurs (optionnel)",
+            "name": "titre_page_colore",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Si rempli, ce titre sera affiché à la place du titre principal.<br>Supporte les couleurs : [blue]Nos[/blue] conseils<br><br>Couleurs disponibles : [blue], [orange], [dark], [green], [ciel]",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Nos [blue]conseils[/blue] d'experts",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-actualites-liste.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Permet d'ajouter un titre avec des couleurs différentes",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": ""
+}

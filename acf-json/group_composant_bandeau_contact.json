@@ -1,0 +1,110 @@
+{
+    "key": "group_composant_bandeau_contact",
+    "title": "Bandeau contact",
+    "fields": [
+        {
+            "key": "field_bandeau_titre_composant",
+            "label": "Titre composant",
+            "name": "titre_composant",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Supporte les couleurs : En savoir [blue]plus ?[/blue]",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "En savoir [blue]plus ?[/blue]",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_bandeau_texte_element",
+            "label": "Texte élément",
+            "name": "texte_element",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description du bandeau contact",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Integer lorem gravida lacus adipiscing aliquam nibh. Felis ornare arcu massa quis. A sed nibh massa quisque quis vel.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_bandeau_cta_element",
+            "label": "CTA élément",
+            "name": "cta_element",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Lien du bouton d'action",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_bandeau_images_element",
+            "label": "Images élément",
+            "name": "images_element",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Sélectionnez exactement 6 images pour la grille (3 colonnes × 2 rangées)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 6,
+            "max": 6,
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "impossible_post_type"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Permet de transmettre les informations de contact",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1736611200
+}
