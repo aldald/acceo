@@ -1,6 +1,6 @@
 a.page-link {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: $blanc;
   border: none;
   border-radius: 50%;
@@ -14,8 +14,8 @@ a.page-link {
 }
 
 li.page-item.active {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: $bleu-principal;
   border: none;
   border-radius: 50%;
@@ -43,8 +43,8 @@ span.page-link.current {
 
 a.btn.btn-nav.btn-prev,
 a.btn.btn-nav.btn-next {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: $bleu-principal;
   border: none;
   border-radius: 50%;
@@ -55,4 +55,8 @@ a.btn.btn-nav.btn-next {
   justify-content: center;
   transition: all 0.3s ease;
   border: 1px solid $bleu-principal;
+}
+
+ul.pagination svg path {
+    stroke-width: 1.5;
 }

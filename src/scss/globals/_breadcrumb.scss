@@ -1,9 +1,7 @@
 li.breadcrumb-item a {
   color: $bleu-principal;
 }
-.breadcrumb-wrapper {
-  padding-top: 200px;
-}
+
 
 .breadcrumb-separator {
   width: 16px;
@@ -22,7 +20,5 @@ li.breadcrumb-item a {
 }
 
 @media only screen and (max-width: 1199px) {
-  .breadcrumb-wrapper {
-    padding-top: 100px;
-  }
+
 }

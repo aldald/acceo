@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Composant Listing Blog
  *
@@ -26,7 +27,7 @@ if ($blog_mode === 'manuel') {
 if ($articles_ids && count($articles_ids) >= 3) :
 ?>
 
-    <section class="blog-section">
+    <div class="blog-section">
         <div class="container">
 
             <!-- Header -->
@@ -41,7 +42,7 @@ if ($articles_ids && count($articles_ids) >= 3) :
                     <p class="blog-chapo"><?php echo esc_html($blog_chapo); ?></p>
                 <?php endif; ?>
             </div>
-            
+
             <div class="blog-grid">
 
                 <div class="blog-article-main">
@@ -60,20 +61,20 @@ if ($articles_ids && count($articles_ids) >= 3) :
                 <div class="blog-cta-global">
 
                     <?php
-                        echo render_button(array(
-                            'type'   => 'ghost',
-                            'url'    => esc_url($blog_cta['lien']),
-                            'text'   => esc_html($blog_cta['texte']) ?: '',
-                            'target' => '',
-                        ));
-                        ?>
+                    echo render_button(array(
+                        'type'   => 'ghost',
+                        'url'    => esc_url($blog_cta['lien']),
+                        'text'   => esc_html($blog_cta['texte']) ?: '',
+                        'target' => '',
+                    ));
+                    ?>
 
-                    
+
                 </div>
             <?php endif; ?>
 
         </div>
-    </section>
+    </div>
 
 <?php
 endif;

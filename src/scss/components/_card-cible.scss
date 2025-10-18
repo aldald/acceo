@@ -3,7 +3,7 @@
 // ============================================
 
 .vous-etes-section {
-  padding: 48px 0 100px 0;
+  padding: 48px 0 120px 0;
   background: $bg;
   position: relative;
 }
@@ -35,8 +35,8 @@
 }
 
 .carrousel-btn {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: $bleu-principal;
   border: none;
   border-radius: 50%;
@@ -69,7 +69,9 @@
   position: relative;
   padding: 0 20px;
 }
-
+.carrousel-navigation svg path {
+  stroke-width: 1.5;
+}
 .carrousel-track {
   display: flex;
   transition: transform 0.5s ease;
@@ -186,7 +188,7 @@
   }
 
   .vous-etes-section {
-    padding: 64px 0;
+    padding: 48px 0 64px 0;
   }
 }
 
@@ -197,7 +199,8 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .title-heading .h2, .title-heading h2 {
+  .title-heading .h2,
+  .title-heading h2 {
     font-size: 28px !important;
   }
 }

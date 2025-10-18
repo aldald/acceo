@@ -16,7 +16,7 @@ $boxes = get_sub_field('boxes');
 if (!$boxes || empty($boxes)) return;
 ?>
 
-<section class="reassurance-section" <?php if ($background): ?>style="background-image: url(<?php echo esc_url($background); ?>);" <?php endif; ?>>
+<div class="reassurance-section" <?php if ($background): ?>style="background-image: url(<?php echo esc_url($background); ?>);" <?php endif; ?>>
     <div class="container">
         <div class="reassurance-wrapper">
             <div class="reassurance-grid">
@@ -87,4 +87,4 @@ if (!$boxes || empty($boxes)) return;
             </div>
         </div>
     </div>
-</section>
+</div>

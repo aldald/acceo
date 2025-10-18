@@ -20,7 +20,7 @@ $image_url = $image ? wp_get_attachment_image_url($image, 'full') : '';
 $background_url = $background ?: '';
 ?>
 
-<section class="hero-section-modern" <?php if ($background_url): ?>style="background-image: url(<?php echo esc_url($background_url); ?>);" <?php endif; ?>>
+<div class="hero-section-modern" <?php if ($background_url): ?>style="background-image: url(<?php echo esc_url($background_url); ?>);" <?php endif; ?>>
     <div class="container">
         <div class="hero-content-modern">
 
@@ -63,4 +63,4 @@ $background_url = $background ?: '';
     <?php endif; ?>
 
 
-</section>
+    </div>

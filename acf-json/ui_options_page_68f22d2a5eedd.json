@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_68f22d2a5eedd",
+    "title": "Pied de page",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Pied de page",
+    "menu_slug": "blog_composant",
+    "parent_slug": "edit.php",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Pied de page",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "update_button": "Mise à jour",
+    "updated_message": "Options mises à jour",
+    "capability": "edit_posts",
+    "data_storage": "post_id",
+    "post_id": "blog_composant",
+    "autoload": 1,
+    "modified": 1760704627
+}

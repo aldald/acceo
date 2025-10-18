@@ -62,6 +62,10 @@ img.avatar.avatar-40.photo {
   line-height: 1.4;
   font-weight: 500;
 }
+main#main-content {
+  padding-top: 200px;
+  background-color: $bg;
+}
 
 /* Small devices (≥ 576px) */
 @media (min-width: 576px) {
@@ -117,5 +121,11 @@ img.avatar.avatar-40.photo {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  main#main-content {
+    padding-top: 100px;
   }
 }

@@ -23,4 +23,4 @@ A Wordpress theme based on Bootstrap 5 and ACF
    *Note: source maps are only generated for development.*
 
    To build for production, run the command `gulp build --production`, or `npm run prod` for production-ready CSS
-   and JavaScript.# acceo
+   and JavaScript.

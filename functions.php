@@ -23,10 +23,19 @@ require_once 'functions/hook-topbar-menu-icons.php';
 require_once 'functions/function-parse-colored-text.php';
 require_once 'functions/hook-cpt-realisation.php';
 require_once 'functions/hook-cpt-faq.php';
+require_once 'functions/hook-cpt-mission.php';
 require_once 'functions/function-render-blog-card.php';
 require_once 'functions/function-render-actualite-card.php';
 require_once 'functions/class-bootstrap5-megamenu-walker.php';
 require_once 'functions/function-render-button.php';
 require_once 'functions/function-render-category-badge.php';
+require_once 'functions/function-acf-icon-picker.php';
 
 
+add_action('admin_enqueue_scripts', function ($hook) {
+    if (isset($_GET['page']) && ($_GET['page'] === 'blog_composant') || ($_GET['page'] === 'blog_category_composant'))  {
+        wp_enqueue_editor();
+        wp_enqueue_media();
+        add_editor_style();
+    }
+});

@@ -24,7 +24,7 @@ if (empty($realisations_avec_temoignage)) return;
 ?>
 
 <!-- Section SLIDER TÉMOIGNAGES -->
-<section class="temoignages-section">
+<div class="temoignages-section">
     <div class="container">
 
         <div class="title-heading">
@@ -138,4 +138,4 @@ if (empty($realisations_avec_temoignage)) return;
         </div>
     <?php endif; ?>
 
-</section>
+</div>

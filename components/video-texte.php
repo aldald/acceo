@@ -19,7 +19,7 @@ if (!$video || empty($video['miniature'])) return;
 ?>
 
 <!-- Section DÉCOUVRIR ACCEO -->
-<section class="acceo-section">
+<div class="acceo-section">
 
     <div class="acceo-media">
         <?php
@@ -57,4 +57,4 @@ if (!$video || empty($video['miniature'])) return;
 
     </div>
 
-</section>
+</div>

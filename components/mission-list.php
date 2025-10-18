@@ -17,7 +17,7 @@ $missions_ids = get_sub_field('missions');
 if (!$missions_ids || empty($missions_ids)) return;
 ?>
 
-<section class="missions-section" <?php if ($background): ?>style="background-image: url(<?php echo esc_url($background); ?>);" <?php endif; ?>>
+<div class="missions-section" <?php if ($background): ?>style="background-image: url(<?php echo esc_url($background); ?>);" <?php endif; ?>>
     <div class="container">
         <div class="content-mission">
 
@@ -71,8 +71,9 @@ if (!$missions_ids || empty($missions_ids)) return;
                                 <?php if (!empty($icon_mission)): ?>
                                     <?php
                                     // Utiliser votre fonction helper
-                                    if (function_exists('the_icon')) {
-                                        the_icon($icon_mission);
+                                    if (function_exists('the_icon')) { ?>
+                                         <?php the_icon($icon_mission); ?>
+                                    <?php
                                     } else {
                                         // Fallback si la fonction n'existe pas
                                         echo '<i class="bi bi-check-circle"></i>';
@@ -115,4 +116,4 @@ if (!$missions_ids || empty($missions_ids)) return;
 
         </div>
     </div>
-</section>
+</div>

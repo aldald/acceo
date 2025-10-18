@@ -1,8 +1,8 @@
 <?php
 
 // Contenus page builder
-add_action( 'acf/include_fields', function() {
-    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+add_action('acf/include_fields', function () {
+    if (! function_exists('acf_add_local_field_group')) {
         return;
     }
 
@@ -61,16 +61,24 @@ add_action( 'acf/include_fields', function() {
                             array(
                                 'param' => 'page_template',
                                 'operator' => '==',
-                                'value' => 'template-pages/template-landing.php',
+                                'value' => 'template-pages/actualites-liste.php',
                             ),
                         ),
                         array(
                             array(
                                 'param' => 'options_page',
                                 'operator' => '==',
-                                'value' => 'blog_options',
+                                'value' => 'blog_composant',
                             ),
                         ),
+                        array(
+                            array(
+                                'param' => 'options_page',
+                                'operator' => '==',
+                                'value' => 'blog_category_composant',
+                            ),
+                        ),
+
                     ),
                     'acfe_flexible_category' => false,
                     'acfe_layout_col' => 'auto',
@@ -82,7 +90,7 @@ add_action( 'acf/include_fields', function() {
         }
     }
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_653a695dbbce2',
         'title' => 'Contenus page builder',
         'fields' => array(
@@ -230,14 +238,21 @@ add_action( 'acf/include_fields', function() {
                                 array(
                                     'param' => 'page_template',
                                     'operator' => '==',
-                                    'value' => 'template-pages/template-landing.php',
+                                    'value' => 'template-pages/actualites-liste.php',
                                 ),
                             ),
                             array(
                                 array(
                                     'param' => 'options_page',
                                     'operator' => '==',
-                                    'value' => 'blog_options',
+                                    'value' => 'blog_composant',
+                                ),
+                            ),
+                            array(
+                                array(
+                                    'param' => 'options_page',
+                                    'operator' => '==',
+                                    'value' => 'blog_category_composant',
                                 ),
                             ),
                         ),
@@ -282,14 +297,21 @@ add_action( 'acf/include_fields', function() {
                 array(
                     'param' => 'page_template',
                     'operator' => '==',
-                    'value' => 'template-pages/template-landing.php',
+                    'value' => 'template-pages/actualites-liste.php',
                 ),
             ),
             array(
                 array(
                     'param' => 'options_page',
                     'operator' => '==',
-                    'value' => 'blog_options',
+                    'value' => 'blog_composant',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'blog_category_composant',
                 ),
             ),
         ),
@@ -306,7 +328,6 @@ add_action( 'acf/include_fields', function() {
             4 => 'comments',
             5 => 'send-trackbacks',
             6 => 'format',
-            7 => 'the_content',
             8 => 'tags',
         ),
         'active' => true,
@@ -319,16 +340,16 @@ add_action( 'acf/include_fields', function() {
         'acfe_display_title' => 'Contenus',
         'acfe_meta' => '',
         'acfe_note' => '',
-    ) );
-} );
+    ));
+});
 
 // Options des sections
-add_action( 'acf/include_fields', function() {
-    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+add_action('acf/include_fields', function () {
+    if (! function_exists('acf_add_local_field_group')) {
         return;
     }
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_653a7516644ff',
         'title' => 'Options des sections',
         'fields' => array(
@@ -477,8 +498,7 @@ add_action( 'acf/include_fields', function() {
                 'color_picker' => 0,
                 'allow_null' => 1,
                 'theme_colors' => 1,
-                'colors' => array(
-                ),
+                'colors' => array(),
                 'button_label' => 'Sélectionner une couleur',
                 'absolute' => false,
                 'input' => true,
@@ -854,14 +874,21 @@ add_action( 'acf/include_fields', function() {
                 array(
                     'param' => 'page_template',
                     'operator' => '==',
-                    'value' => 'template-pages/template-landing.php',
+                    'value' => 'template-pages/actualites-liste.php',
                 ),
             ),
             array(
                 array(
                     'param' => 'options_page',
                     'operator' => '==',
-                    'value' => 'blog_options',
+                    'value' => 'blog_composant',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'blog_category_composant',
                 ),
             ),
         ),
@@ -879,5 +906,5 @@ add_action( 'acf/include_fields', function() {
         'acfe_display_title' => 'Options',
         'acfe_meta' => '',
         'acfe_note' => '',
-    ) );
-} );
+    ));
+});

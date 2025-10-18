@@ -1,18 +1,14 @@
 <?php
 
 /**
- * Template for Category Archive
- * Design identique à template-actualites-liste.php
+ * Template Name: Actualités - Liste
+ * Description: Modèle de page dédié à l'accueil des Actualités
  *
  * @package churchill
  */
 defined('ABSPATH') || exit;
 
 get_header();
-
-// Récupérer la catégorie courante
-$queried_object = get_queried_object();
-$current_category = $queried_object->term_id;
 ?>
 
 <main id="main-content" class="actualites-page">
@@ -30,18 +26,18 @@ $current_category = $queried_object->term_id;
 
                 <!-- Titre de la page avec support des couleurs -->
                 <?php
-                // Si un titre coloré est défini dans ACF, l'utiliser, sinon utiliser le titre de la catégorie
-                $titre_colore = get_field('titre_page_colore', 'category_' . $current_category);
+                // Si un titre coloré est défini, l'utiliser, sinon utiliser le titre normal
+                $titre_colore = get_field('titre_page_colore');
                 if ($titre_colore) {
                     echo '<h1>' . display_colored_title($titre_colore) . '</h1>';
                 } else {
-                    echo '<h1>' . single_cat_title('', false) . '</h1>';
+                    echo '<h1>' . get_the_title() . '</h1>';
                 }
                 ?>
 
-                <?php if (category_description()): ?>
+                <?php if (get_the_content()): ?>
                     <div class="actualites-chapo">
-                        <?php echo category_description(); ?>
+                        <?php the_content(); ?>
                     </div>
                 <?php endif; ?>
             </div>
@@ -55,6 +51,9 @@ $current_category = $queried_object->term_id;
                 'order' => 'ASC'
             ));
 
+            // Récupérer la catégorie active (si filtre appliqué)
+            $current_category = get_query_var('cat') ? intval(get_query_var('cat')) : 0;
+
             // Arguments de la requête
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
@@ -63,9 +62,13 @@ $current_category = $queried_object->term_id;
                 'posts_per_page' => 9, // 1 hero + 8 dans la grille
                 'paged' => $paged,
                 'orderby' => 'date',
-                'order' => 'DESC',
-                'cat' => $current_category // Toujours filtré par la catégorie courante
+                'order' => 'DESC'
             );
+
+            // Filtrer par catégorie si nécessaire
+            if ($current_category > 0) {
+                $args['cat'] = $current_category;
+            }
 
             $actualites_query = new WP_Query($args);
             ?>
@@ -110,12 +113,12 @@ $current_category = $queried_object->term_id;
                             <h2><?php echo display_colored_title('Rechercher par [blue]thématique[/blue]'); ?></h2>
                         </div>
                         <div class="filters-wrapper">
-                            <a href="<?php echo get_post_type_archive_link('post'); ?>"
+                            <a href="<?php echo get_permalink(); ?>"
                                 class="filter-btn <?php echo ($current_category === 0) ? 'active' : ''; ?>">
                                 <?php _e('Tous les sujets', 'churchill'); ?>
                             </a>
                             <?php foreach ($categories as $category): ?>
-                                <a href="<?php echo get_term_link($category->term_id); ?>"
+                                <a href="<?php echo add_query_arg('cat', $category->term_id, get_permalink()); ?>"
                                     class="filter-btn <?php echo ($current_category === $category->term_id) ? 'active' : ''; ?>">
                                     <?php echo esc_html($category->name); ?>
                                 </a>
@@ -144,7 +147,6 @@ $current_category = $queried_object->term_id;
 
             <?php else: ?>
 
-                <!-- Message si aucun article -->
                 <div class="actualites-no-results">
                     <p><?php _e('Aucune actualité pour le moment.', 'churchill'); ?></p>
                 </div>
@@ -153,14 +155,13 @@ $current_category = $queried_object->term_id;
 
         </div>
     </section>
+
     <?php
-    get_template_part('template-parts/builder', '', array(
-        'context' => 'blog_category_composant'
-    ));
+ get_template_part('template-parts/builder','',array("context"=>get_the_ID()));
+
     ?>
+
 </main>
-
-
 
 <?php
 get_footer();
