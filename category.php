@@ -124,12 +124,14 @@ $current_category = $queried_object->term_id;
                     </div>
                 <?php endif; ?>
 
-                <!-- Grille d'articles -->
+                <!-- Grille d'articles (Bootstrap Grid) -->
                 <?php if (!empty($grid_articles)): ?>
-                    <div class="actualites-grid">
+                    <div class="row g-4">
                         <?php foreach ($grid_articles as $article_id): ?>
-                            <div class="actualites-grid-item">
-                                <?php echo render_actualite_card($article_id); ?>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="actualites-grid-item">
+                                    <?php echo render_actualite_card($article_id); ?>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>

@@ -1,267 +1,314 @@
+// ============================================
+// Boutons - Styles
+// ============================================
+
+// ============================================
+// Button Primary
+// ============================================
+
 .btn-primary {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   color: $blanc;
-
   text-decoration: none;
-
   padding: 0;
-
   border: none;
-
   border-radius: 8px;
-
   font-size: 16px;
-
   font-weight: 600;
-
   cursor: pointer;
-
   overflow: hidden;
-
   transition: all 0.3s ease;
-}
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-
-  color: $blanc;
-}
-
-.btn-primary .btn-text {
-  padding: 11px 22px;
-
-  flex-grow: 1;
-
-  text-align: left;
-
-  background: $bleu-secondaire;
-
-  line-height: auto;
-
-  min-height: 48px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.btn-primary span.btn-icon {
-  background-color: $bleu-principal;
-
-  padding: 14px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  height: 100%;
-}
-
-.btn-secondary {
-  position: absolute;
-
-  z-index: 99999;
-
-  bottom: 20px;
-
-  right: 20px;
-  text-decoration: none;
-}
-
-.btn-secondary span.btn-icon {
-  background: $blanc;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.vous-etes-carte .btn-secondary {
-  display: flex;
-  justify-content: center;
-}
-
-.vous-etes-carte:hover .btn-secondary .btn-text {
-  visibility: visible;
-
-  background: $bleu-secondaire;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  padding: 12px;
-  display: flex;
-  height: 100%;
-  color: $blanc;
-}
-
-.vous-etes-carte:hover .carte-titre-modern {
-  color: $bleu-secondaire;
-}
-
-.btn-secondary .btn-text {
-  visibility: hidden;
-}
-
-.btn-tertiary {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  color: $blanc;
-
-  text-decoration: none;
-
-  padding: 0;
-
-  border: none;
-
-  border-radius: 8px;
-
-  font-size: 16px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  overflow: hidden;
-
-  transition: all 0.3s ease;
-  background-color: $bleu-secondaire;
-}
-
-.btn-tertiary:hover {
-  transform: translateY(-2px);
-
-  color: $blanc;
-}
-
-.btn-tertiary .btn-text {
-  padding: 11px 22px;
-  flex-grow: 1;
-  text-align: left;
-  background: $blanc;
-  line-height: 1.62;
-  min-height: 48px;
-  color: $bleu-principal;
-}
-
-.btn-tertiary span.btn-icon {
-  background-color: $bleu-secondaire;
-
-  padding: 12px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  height: 100%;
-}
-
-.btn-ghost {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  color: $blanc;
-
-  text-decoration: none;
-
-  padding: 0;
-
-  border: none;
-
-  border-radius: 8px;
-
-  font-size: 16px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  overflow: hidden;
-
-  transition: all 0.3s ease;
-}
-
-.btn-ghost:hover {
-  transform: translateY(-2px);
-
-  color: $blanc;
-}
-
-.btn-ghost .btn-text {
-  padding: 10px 22px;
-  flex-grow: 1;
-  text-align: left;
-  background: transparent;
-  line-height: 1.62;
-  min-height: 48px;
-  color: $bleu-principal;
-  border: 1px solid $bleu-principal;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.btn-ghost span.btn-icon {
-  background-color: $bleu-principal;
-
-  padding: 14px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  height: 100%;
-}
-
-.amo-span {
-  display: inline-flex;
-
-  align-items: center;
-
-  color: white;
-
-  padding: 1px 10px 1px 0;
-
-  border-radius: 8px;
-
-  font-weight: 500;
-
-  font-size: 14px;
-
-  cursor: pointer;
-}
-
-@media only scree and (max-width: 991px) {
-  .amo-span {
-    font-size: 11px;
+  &:hover {
+    transform: translateY(-2px);
+    color: $blanc;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .btn-primary .btn-text {
+  .btn-text {
     padding: 11px 22px;
     flex-grow: 1;
     text-align: left;
-    background: #2e76b8;
-    line-height: 1.4;
+    background: $bleu-secondaire;
+    line-height: auto;
     min-height: 48px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
+
+    @media only screen and (max-width: 768px) {
+      padding: 11px 22px;
+      line-height: 1.4;
+      font-size: 13px;
+    }
+  }
+
+  span.btn-icon {
+    background-color: $bleu-principal;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// ============================================
+// Button Secondary
+// ============================================
+
+.btn-secondary {
+  position: absolute;
+  z-index: 99999;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+
+  .btn-text {
+    visibility: hidden;
+  }
+
+  span.btn-icon {
+    background: $blanc;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// ============================================
+// Button Secondary dans Card Cible
+// ============================================
+
+.vous-etes-carte {
+  .btn-secondary {
+    display: flex;
+    justify-content: center;
+  }
+
+  &:hover {
+    .btn-secondary .btn-text {
+      visibility: visible;
+      background: $bleu-secondaire;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      padding: 12px;
+      display: flex;
+      height: 100%;
+      color: $blanc;
+    }
+
+    .carte-titre-modern {
+      color: $bleu-secondaire;
+    }
+  }
+}
+
+// ============================================
+// Button Tertiary
+// ============================================
+
+.btn-tertiary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $blanc;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: $bleu-secondaire;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: $blanc;
+  }
+
+  .btn-text {
+    padding: 11px 22px;
+    flex-grow: 1;
+    text-align: left;
+    background: $blanc;
+    line-height: 1.62;
+    min-height: 48px;
+    color: $bleu-principal;
+  }
+
+  span.btn-icon {
+    background-color: $bleu-secondaire;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// ============================================
+// Button Ghost
+// ============================================
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $blanc;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: $blanc;
+  }
+
+  .btn-text {
+    padding: 10px 22px;
+    flex-grow: 1;
+    text-align: left;
+    background: transparent;
+    line-height: 1.62;
+    min-height: 48px;
+    color: $bleu-principal;
+    border: 1px solid $bleu-principal;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  span.btn-icon {
+    background-color: $bleu-principal;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// ============================================
+// Button Primary Footer
+// ============================================
+
+.btn-primary-footer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $blanc;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: $blanc;
+  }
+
+  .btn-text {
+    padding: 10px 22px;
+    flex-grow: 1;
+    text-align: left;
+    background: $bleu-secondaire;
+    line-height: 1.62;
+    min-height: 48px;
+    color: $blanc;
+    border: 1px solid $bleu-secondaire;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  span.btn-icon {
+    background-color: $blanc;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// ============================================
+// Button Secondary Footer
+// ============================================
+
+.btn-secondary-footer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $blanc;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: $blanc;
+  }
+
+  .btn-text {
+    padding: 10px 22px;
+    flex-grow: 1;
+    text-align: left;
+    background: transparent;
+    line-height: 1.62;
+    min-height: 48px;
+    color: $blanc;
+    border: 1px solid $blanc;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  span.btn-icon {
+    background-color: $blanc;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+// ============================================
+// AMO Span (Badge)
+// ============================================
+
+.amo-span {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  padding: 1px 10px 1px 0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+
+  @media only screen and (max-width: 991px) {
+    font-size: 11px;
   }
 }

@@ -1,0 +1,160 @@
+// ==========================================
+// Listing Process - Slider
+// ==========================================
+
+.listing-process-section {
+  padding: 120px 0 60px 0;
+  background: $bg;
+
+  @media only screen and (max-width: 860px) {
+    padding: 60px 0;
+  }
+
+  .title-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .process-chapo {
+      max-width: 870px;
+    }
+  }
+}
+
+.process-content-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+// ==========================================
+// Track Carrousel
+// ==========================================
+
+.carrousel-track-process {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 32px;
+  justify-content: flex-start;
+  padding-left: max(calc((100vw - 1320px) / 2), 20px);
+  align-items: stretch;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 20px;
+    gap: 24px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    padding-left: 20px;
+    gap: 20px;
+  }
+}
+
+// ==========================================
+// Carte Process
+// ==========================================
+
+.process-carte {
+  flex: 0 0 calc((100% - 64px) / 3);
+  max-width: 410px;
+  background: $blanc;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 556px;
+
+  &:hover {
+    transform: translateY(-8px);
+
+    .process-image img {
+      transform: scale(1.05);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    flex: 0 0 410px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex: 0 0 calc((100% - 48px) / 2.5);
+    max-width: 350px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    flex: 0 0 280px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex: 0 0 260px;
+  }
+}
+
+// ==========================================
+// Image Process
+// ==========================================
+
+.process-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  @media only screen and (max-width: 860px) {
+    height: 200px;
+  }
+}
+
+// ==========================================
+// Contenu Process
+// ==========================================
+
+.process-content {
+  padding: 24px;
+}
+
+// ==========================================
+// Numéro Process
+// ==========================================
+
+.process-numero {
+  font-size: 80px;
+  font-weight: 500;
+  color: $bleu-secondaire;
+  line-height: 1.05;
+
+  @media only screen and (max-width: 860px) {
+    font-size: 40px;
+  }
+}
+
+// ==========================================
+// Titre Process
+// ==========================================
+
+.process-titre {
+  font-size: 24px;
+  font-weight: 500;
+  color: $bleu-principal;
+  line-height: 1.2;
+  max-width: 260px;
+}
+
+// ==========================================
+// Texte Process
+// ==========================================
+
+.process-texte {
+  p {
+    margin-bottom: 0;
+  }
+}

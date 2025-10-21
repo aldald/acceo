@@ -1,29 +1,58 @@
-/* ==========================================
-   SECTION TÉMOIGNAGES - EFFET PEEK
-   ========================================== */
+// ==========================================
+// Section Témoignages - Effet Peek
+// ==========================================
 
 .temoignages-section {
   padding: 80px 0 80px 0;
   background: #edf3f6;
-}
-.temoignages-section .title-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
+
+  @media only screen and (max-width: 860px) {
+    padding: 60px 0;
+  }
+
+  .title-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+    }
+  }
+
+  .temoignage-logo img {
+    max-width: 100px;
+  }
+
+  .carrousel-container {
+    padding-right: 80px;
+    margin-bottom: 0;
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      padding-right: 60px;
+    }
+
+    @media only screen and (max-width: 860px) {
+      padding-right: 40px;
+    }
+  }
 }
 
-.temoignages-section .title-heading h2 {
-  margin-bottom: 0;
-}
+// ==========================================
+// Container Carrousel
+// ==========================================
 
 .carrousel-container {
   overflow: hidden;
   position: relative;
   margin-bottom: 0;
-}
-.temoignages-section .carrousel-container {
-  padding-right: 80px;
 }
 
 .carrousel-track-temoignages {
@@ -33,9 +62,20 @@
   justify-content: flex-start;
   padding-left: max(calc((100vw - 1320px) / 2), 20px);
   align-items: stretch;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 20px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    padding-left: 0;
+  }
 }
 
-/* Carte témoignage */
+// ==========================================
+// Carte Témoignage (6 colonnes)
+// ==========================================
+
 .temoignage-carte {
   flex: 0 0 calc((100% - 24px) / 2.3);
   max-width: 628px;
@@ -48,68 +88,134 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 1440px) {
+    flex: 0 0 628px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex: 0 0 calc((100% - 24px) / 1.5);
+    max-width: 400px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    flex: 0 0 280px;
+    padding: 24px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    flex: 0 0 305px;
+    padding: 20px;
+  }
 }
 
-.temoignage-carte:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+// ==========================================
+// Header Témoignage
+// ==========================================
+
+.header-temoignage {
+  @media only screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
 }
 
-.footer-temoignage {
-  text-align: right;
+.temoignage-logo {
+  // Styles du logo si nécessaire
 }
+
+// ==========================================
+// Badge Catégorie
+// ==========================================
 
 .temoignage-badge {
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 10;
+
+  .amo-span {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    padding: 1px 10px 1px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 13px;
+    white-space: nowrap;
+
+    @media only screen and (max-width: 860px) {
+      font-size: 11px;
+    }
+  }
+
+  .icon-container {
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+
+    @media only screen and (max-width: 860px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+
+  .span-text {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
 }
 
-.temoignage-badge .amo-span {
-  display: inline-flex;
-  align-items: center;
-  color: white;
-  padding: 1px 10px 1px 0;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-.temoignage-badge .icon-container {
-  background-color: white;
-  border-bottom-left-radius: 8px;
-  border-top-left-radius: 8px;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-.temoignage-badge .triangle-icon {
-  width: 16px;
-  height: 16px;
-}
-
-.temoignage-badge .span-text {
-  white-space: nowrap;
-  font-size: 12px;
-}
+// ==========================================
+// Citation
+// ==========================================
 
 .temoignage-citation {
   flex: 1;
   min-height: 120px;
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #05354e;
+    font-style: italic;
+
+    @media only screen and (max-width: 860px) {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 860px) {
+    min-height: 100px;
+  }
 }
 
-.temoignage-citation p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #05354e;
-  font-style: italic;
+// ==========================================
+// Footer Témoignage
+// ==========================================
+
+.footer-temoignage {
+  text-align: right;
 }
 
 .temoignage-auteur {
@@ -118,18 +224,23 @@
   gap: 4px;
   padding-top: 16px;
   border-top: 1px solid #e5e7eb;
+
+  strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: #05354e;
+  }
+
+  span {
+    font-size: 14px;
+    color: #666;
+  }
 }
 
-.temoignage-auteur strong {
-  font-size: 16px;
-  font-weight: 600;
-  color: #05354e;
-}
+// ==========================================
+// Boutons
+// ==========================================
 
-.temoignage-auteur span {
-  font-size: 14px;
-  color: #666;
-}
 .btn-temoignage {
   display: inline-flex;
   align-items: center;
@@ -145,20 +256,30 @@
   transition: all 0.3s ease;
   align-self: flex-end;
   margin-top: auto;
+
+  &:hover {
+    transform: translateX(4px);
+    color: #fff;
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  @media only screen and (max-width: 576px) {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
 }
 
-.btn-temoignage:hover {
-  transform: translateX(4px);
-  color: #fff;
-}
+// ==========================================
+// CTA Global
+// ==========================================
 
-.btn-temoignage svg {
-  transition: transform 0.3s ease;
-}
-
-.btn-temoignage:hover svg {
-  transform: translateX(4px);
-}
 .temoignages-cta-global {
   text-align: center;
   margin-top: 40px;
@@ -176,130 +297,49 @@
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s ease;
-}
 
-.btn-global-temoignages:hover {
-  background: #2e76b8;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(46, 118, 184, 0.3);
-  color: #fff;
-}
+  &:hover {
+    background: #2e76b8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 118, 184, 0.3);
+    color: #fff;
 
-.btn-global-temoignages svg {
-  transition: transform 0.3s ease;
-}
-
-.btn-global-temoignages:hover svg {
-  transform: translateX(4px);
-}
-
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
-
-@media (min-width: 1440px) {
-  .temoignage-carte {
-    flex: 0 0 628px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .temoignages-section .carrousel-container {
-    padding-right: 60px;
+    svg {
+      transform: translateX(4px);
+    }
   }
 
-  .carrousel-track-temoignages {
-    padding-left: 20px;
+  svg {
+    transition: transform 0.3s ease;
   }
 
-  .temoignage-carte {
-    flex: 0 0 calc((100% - 24px) / 1.5);
-    max-width: 400px;
+  @media only screen and (max-width: 576px) {
+    font-size: 14px;
+    padding: 12px 24px;
   }
+}
 
-  .temoignages-section .title-heading {
-    flex-direction: column;
-    gap: 24px;
-    text-align: center;
-  }
+// ==========================================
+// Navigation Carrousel (hérité)
+// ==========================================
 
-  .carrousel-navigation {
+.carrousel-navigation {
+  @media (min-width: 768px) and (max-width: 1199px) {
     order: 2;
   }
-  .carrousel-container {
-    margin-bottom: 0;
-  }
 }
 
-@media only screen and (max-width: 991px) {
-  .temoignage-badge {
-    position: relative;
-    top: auto;
-    right: auto;
-  }
+// ==========================================
+// Responsive Spécifique FAQ (conservé du CSS original)
+// ==========================================
 
-  .header-temoignage {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-  }
+@media only screen and (max-width: 991px) {
   .faq-section-modern {
     background-size: 650px auto, auto auto;
     background-position: right 0 bottom 0, left 0 bottom 0;
   }
+
   .faq-titre-modern {
     max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .temoignages-section {
-    padding: 60px 0;
-  }
-
-  .temoignages-section .carrousel-container {
-    padding-right: 40px;
-  }
-
-  .carrousel-track-temoignages {
-    padding-left: 0;
-  }
-
-  .temoignage-carte {
-    flex: 0 0 280px;
-    padding: 24px;
-  }
-
-  .temoignage-citation {
-    min-height: 100px;
-  }
-
-  .temoignage-citation p {
-    font-size: 14px;
-  }
-
-  .temoignage-badge .amo-span {
-    font-size: 11px;
-  }
-
-  .temoignage-badge .icon-container {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .temoignage-carte {
-    flex: 0 0 305px;
-    padding: 20px;
-  }
-
-  .btn-temoignage {
-    font-size: 13px;
-    padding: 10px 20px;
-  }
-
-  .btn-global-temoignages {
-    font-size: 14px;
-    padding: 12px 24px;
   }
 }

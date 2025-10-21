@@ -1,27 +1,33 @@
 // ============================================
-// Vidéo / Texte - Style ACCEO
+// Vidéo / Texte - Composant
 // ============================================
 
-.acceo-section {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr;
-  gap: 0;
-  align-items: stretch;
-  box-sizing: border-box;
+.video-texte-wrapper {
   margin: 0;
   padding: 0 0 60px 0;
   overflow: hidden;
   background: #edf3f6;
 
-  @media (max-width: 980px) {
-    grid-template-columns: 1fr;
+  // Container-fluid pour layout étendu
+  .container-fluid {
+    padding: 0;
+  }
+
+  // Row Bootstrap sans gap par défaut (g-0)
+  .row {
     margin: 0;
-    gap: 26px;
+  }
+
+  @media (max-width: 980px) {
+    padding: 0 0 32px 0;
   }
 }
 
-// Media (gauche)
-.acceo-media {
+// ============================================
+// Colonne Vidéo (8 colonnes)
+// ============================================
+
+.video-texte-media {
   margin-left: auto;
   max-width: max-content;
   width: 100%;
@@ -34,6 +40,7 @@
   @media (max-width: 980px) {
     margin: 0 clamp(16px, 4vw, 24px);
     max-width: none;
+    margin-bottom: 26px;
   }
 
   img {
@@ -49,8 +56,11 @@
   }
 }
 
-// Bouton Play
-.acceo-play {
+// ============================================
+// Bouton Play (hérité du shortcode modal_video)
+// ============================================
+
+.video-texte-media .acceo-play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,11 +76,6 @@
   justify-content: center;
   transition: all 0.3s ease;
 
-  @media (max-width: 640px) {
-    width: 56px;
-    height: 56px;
-  }
-
   &:hover {
     transform: translate(-50%, -50%) scale(1.1);
     background: $blanc;
@@ -80,25 +85,18 @@
   &:focus {
     outline-offset: 4px;
   }
+
+  @media (max-width: 640px) {
+    width: 56px;
+    height: 56px;
+  }
 }
 
-.acceo-card .btn-primary {
-  color: $bleu-principal;
-  max-width: 305px;
-}
+// ============================================
+// Colonne Texte (4 colonnes)
+// ============================================
 
-.acceo-card .btn-primary .btn-text {
-  background: $blanc;
-  width: auto;
-  justify-content: start;
-}
-
-.acceo-card .btn-primary .btn-icon {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.acceo-card {
+.video-texte-card {
   background-color: $vert-ascenseur;
   color: $blanc;
   border-radius: 12px;
@@ -107,6 +105,13 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 26px;
+  height: 100%;
+
+  @media (max-width: 991px) {
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
 
   @media (max-width: 980px) {
     margin: 0 clamp(16px, 4vw, 24px);
@@ -114,35 +119,47 @@
     border-radius: 12px;
     margin-right: 0;
   }
+
+  // Style du bouton primary dans cette carte
+  .btn-primary {
+    color: $bleu-principal;
+    max-width: 305px;
+
+    .btn-text {
+      background: $blanc;
+      width: auto;
+      justify-content: start;
+    }
+
+    .btn-icon {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
 }
 
-.acceo-title {
+.video-texte-title {
   margin: 0 0 24px 0;
   line-height: 1.1;
   font-weight: 600;
   font-size: 42px;
   color: $blanc;
 
+  span {
+    display: inline-block;
+  }
+
   @media (max-width: 640px) {
     font-size: 32px;
     margin-bottom: 16px;
   }
-
-  span {
-    display: inline-block;
-  }
 }
 
-.acceo-text {
+.video-texte-text {
   margin: 0 0 28px;
   line-height: 1.4;
   font-size: 14px;
   color: $blanc;
-
-  @media (max-width: 640px) {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
 
   p {
     margin-bottom: 16px;
@@ -151,9 +168,21 @@
       margin-bottom: 0;
     }
   }
+
+  @media (max-width: 640px) {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
 }
 
-// CTA
+.video-texte-cta {
+  // Le bouton est géré par render_button()
+}
+
+// ============================================
+// CTA Custom (si non utilisé par render_button)
+// ============================================
+
 .acceo-cta {
   align-self: flex-start;
   display: inline-flex;
@@ -199,10 +228,6 @@
     color: $blanc;
     transition: filter 0.2s ease;
 
-    @media (max-width: 640px) {
-      width: 48px;
-    }
-
     svg {
       width: 20px;
       height: 20px;
@@ -211,10 +236,17 @@
         stroke: $blanc;
       }
     }
+
+    @media (max-width: 640px) {
+      width: 48px;
+    }
   }
 }
 
-// Modale vidéo
+// ============================================
+// Modale vidéo (gérée par le shortcode)
+// ============================================
+
 .video-modal {
   position: fixed;
   inset: 0;
@@ -287,24 +319,15 @@
   }
 }
 
+// ============================================
 // Animation
+// ============================================
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
-}
-
-@media only screen and (max-width: 991px) {
-  .acceo-card {
-    border-radius: 0;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
 }

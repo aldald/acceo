@@ -106,7 +106,7 @@
 
 /* Contenu carte */
 .blog-card-content {
-  padding: 24px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -146,15 +146,13 @@
   margin-top: auto;
 }
 
-
-
 /* Temps de lecture */
 .blog-reading-time {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 14px;
-  color: #6C828D;
+  color: #6c828d;
   white-space: nowrap;
   flex-shrink: 0;
   font-weight: 500;
@@ -172,6 +170,10 @@
 
 .blog-cta-global {
   text-align: center;
+}
+
+.blog-articles-secondary .blog-card-content {
+  padding-left: 24px;
 }
 
 /* ==========================================

@@ -1,0 +1,48 @@
+{
+    "key": "group_categorie_realisation_fields",
+    "title": "Catégorie Réalisation - Champs",
+    "fields": [
+        {
+            "key": "field_categorie_realisation_icon",
+            "label": "Icône de la catégorie",
+            "name": "icon_categorie",
+            "aria-label": "",
+            "type": "icon-picker",
+            "instructions": "Choisir une icône pour cette catégorie de réalisation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "initial_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "categorie_realisation"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour la taxonomie Catégorie Réalisation",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1737400000
+}

@@ -1,0 +1,94 @@
+{
+  "key": "group_liste_expertise",
+  "title": "Liste Expertise",
+  "fields": [
+    {
+      "key": "field_liste_expertise_chapo",
+      "label": "Chapô composant",
+      "name": "chapo",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Texte d'introduction (optionnel)",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_liste_expertise_titre",
+      "label": "Titre composant",
+      "name": "titre",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Supporte les couleurs : Nos [blue]expertises[/blue]",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Nos [blue]expertises[/blue]",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_liste_expertise_selecteur",
+      "label": "Sélecteur expertises",
+      "name": "selecteur_expertises",
+      "aria-label": "",
+      "type": "relationship",
+      "instructions": "Sélectionner les expertises à afficher",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["expertise"],
+      "post_status": ["publish"],
+      "taxonomy": [],
+      "filters": ["search", "taxonomy"],
+      "return_format": "id",
+      "min": 1,
+      "max": "",
+      "elements": "",
+      "bidirectional_target": []
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Liste des expertises au sein de cards cliquables, 4 par colonne",
+  "show_in_rest": 0,
+  "acfe_autosync": ["json"],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737396800
+}

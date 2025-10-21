@@ -100,8 +100,12 @@ get_header();
 
                 <!-- Article Hero (première page uniquement) -->
                 <?php if ($hero_article_id && $paged === 1): ?>
-                    <div class="actualites-hero-wrapper">
-                        <?php echo render_actualite_hero($hero_article_id); ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="actualites-hero-wrapper">
+                                <?php echo render_actualite_hero($hero_article_id); ?>
+                            </div>
+                        </div>
                     </div>
                 <?php endif; ?>
 
@@ -127,12 +131,14 @@ get_header();
                     </div>
                 <?php endif; ?>
 
-                <!-- Grille d'articles -->
+                <!-- Grille d'articles (Bootstrap Grid) -->
                 <?php if (!empty($grid_articles)): ?>
-                    <div class="actualites-grid">
+                    <div class="row g-4">
                         <?php foreach ($grid_articles as $article_id): ?>
-                            <div class="actualites-grid-item">
-                                <?php echo render_actualite_card($article_id); ?>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="actualites-grid-item">
+                                    <?php echo render_actualite_card($article_id); ?>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -157,8 +163,7 @@ get_header();
     </section>
 
     <?php
- get_template_part('template-parts/builder','',array("context"=>get_the_ID()));
-
+    get_template_part('template-parts/builder', '', array("context" => get_the_ID()));
     ?>
 
 </main>

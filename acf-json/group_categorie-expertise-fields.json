@@ -1,0 +1,48 @@
+{
+    "key": "group_categorie_expertise_fields",
+    "title": "Catégorie Expertise - Champs",
+    "fields": [
+        {
+            "key": "field_categorie_expertise_icon",
+            "label": "Icône de la catégorie",
+            "name": "icon_categorie",
+            "aria-label": "",
+            "type": "icon-picker",
+            "instructions": "Choisir une icône pour cette catégorie d'expertise",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "initial_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "categorie_expertise"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Champs pour la taxonomie Catégorie Expertise",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1737400000
+}

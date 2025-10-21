@@ -12,14 +12,16 @@ import "./components/megamenu.js";
 
 // Templates de pages
 import { initActualitesListePage } from "./pages/actualites-liste.js";
+import "./components/liste-realisations-avec-filtre.js";
+import  "./components/liste-expertise-avec-filtre.js";
+import { initListingProcess } from "./components/listing-process.js";
 
 // Initialisation au chargement du DOM
 document.addEventListener("DOMContentLoaded", function () {
-  
   // ============================================
   // COMPOSANTS BUILDER
   // ============================================
-  
+
   // Initialiser le carrousel Card Cible
   if (document.querySelector(".carrousel-track")) {
     initCardCibleCarousel();
@@ -40,23 +42,25 @@ document.addEventListener("DOMContentLoaded", function () {
     initFAQAccordion();
   }
 
+
+  if (document.querySelector(".carrousel-track-process")) {
+    initListingProcess();
+  }
   // ============================================
   // TEMPLATES DE PAGES
   // ============================================
-  
+
   // Page Actualités - Liste
   if (document.querySelector(".actualites-liste")) {
     initActualitesListePage();
   }
-
 });
 
 jQuery(document).ready(function ($) {
-  
   // ============================================
   // MENU STICKY & AUTOHIDE
   // ============================================
-  
+
   var el_autohide = document.querySelector(".autohide");
   if (el_autohide) {
     var last_scroll_top = 0;
@@ -79,7 +83,7 @@ jQuery(document).ready(function ($) {
   // ============================================
   // CAROUSELS SPLIDE
   // ============================================
-  
+
   // Carousel Images
   if ($(".image-carousel").length != 0) {
     $(".image-carousel").each(function () {
@@ -150,7 +154,7 @@ jQuery(document).ready(function ($) {
   // ============================================
   // DROPDOWNS MOBILE
   // ============================================
-  
+
   $(".dropdown-toggle").click(function () {
     window.location.href = $(this).attr("href");
   });
@@ -161,5 +165,4 @@ jQuery(document).ready(function ($) {
       .removeClass("show");
     $(this).parent().find(".dropdown-toggle").toggleClass("show");
   });
-  
 });

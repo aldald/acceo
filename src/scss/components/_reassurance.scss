@@ -13,29 +13,42 @@ $reassurance-padding-mobile: 60px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: left center;
+
+  @media only screen and (max-width: 991px) {
+    padding: $reassurance-padding-tablet 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: $reassurance-padding-mobile 15px;
+
+    .container {
+      padding: 0;
+      overflow-x: hidden;
+    }
+  }
 }
 
-.reassurance-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 1.85fr;
-  gap: 132px;
-  align-items: start;
-  max-width: 1280px;
-  padding-bottom: 20px;
-  margin-bottom: -20px;
+// ============================================
+// Bootstrap Row Spacing
+// ============================================
+
+.reassurance-section .row {
+  row-gap: 48px;
+
+  @media only screen and (max-width: 991px) {
+    row-gap: 32px;
+  }
 }
 
 // ============================================
 // Colonne Gauche : Titre + Texte
 // ============================================
 
-.reassurance-section .title-heading {
-  h2 {
-    font-size: 42px;
-    font-weight: 600;
-    color: $bleu-principal;
-    margin-bottom: 32px;
-    line-height: 1.2;
+.reassurance-content {
+  padding-right: 20px;
+
+  @media only screen and (max-width: 991px) {
+    padding-right: 0;
   }
 }
 
@@ -64,6 +77,23 @@ $reassurance-padding-mobile: 60px;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   position: relative;
+
+  @media only screen and (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 5px;
+  }
 }
 
 // ============================================
@@ -96,6 +126,15 @@ $reassurance-padding-mobile: 60px;
     opacity: 1;
     transform: none;
   }
+
+  @media only screen and (max-width: 767px) {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 0;
+  }
 }
 
 // ============================================
@@ -119,6 +158,11 @@ $reassurance-padding-mobile: 60px;
     svg {
       width: 40px;
       height: 40px;
+
+      @media only screen and (max-width: 767px) {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
@@ -136,6 +180,16 @@ $reassurance-padding-mobile: 60px;
     &.counted {
       animation: pulseNumber 0.3s ease;
     }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 28px;
+      min-height: 36px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      font-size: 24px;
+      min-height: 32px;
+    }
   }
 
   .box-label {
@@ -143,6 +197,31 @@ $reassurance-padding-mobile: 60px;
     color: $bleu-principal;
     font-weight: 500;
     line-height: 1.2;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    max-width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: auto;
+    min-height: 150px;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    min-height: 140px;
+    padding: 16px;
   }
 }
 
@@ -186,129 +265,5 @@ $reassurance-padding-mobile: 60px;
   }
   100% {
     transform: scale(1);
-  }
-}
-
-// ============================================
-// RESPONSIVE - Tablette (1200px)
-// ============================================
-
-@media only screen and (max-width: 1199px) {
-  .reassurance-grid {
-    gap: 60px;
-  }
-
-  .reassurance-boxes-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .reassurance-box-chiffre {
-    max-width: 100%;
-  }
-}
-
-// ============================================
-// RESPONSIVE - Tablette Portrait (991px)
-// ============================================
-
-@media only screen and (max-width: 991px) {
-  .reassurance-section {
-    padding: $reassurance-padding-tablet 0;
-  }
-
-  .reassurance-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-
-    .title-heading {
-      margin-bottom: 0;
-    }
-  }
-
-  .reassurance-section .title-heading h2 {
-    font-size: 36px;
-  }
-}
-
-// ============================================
-// RESPONSIVE - Mobile (767px)
-// ============================================
-
-@media only screen and (max-width: 767px) {
-  .reassurance-section {
-    padding: $reassurance-padding-mobile 15px;
-
-    .container {
-      padding: 0;
-      overflow-x: hidden;
-    }
-  }
-
-  .reassurance-section .title-heading h2 {
-    font-size: 28px;
-  }
-
-  .reassurance-boxes-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 0 10px;
-  }
-
-  .reassurance-box {
-    padding: 16px;
-    border-radius: 8px;
-  }
-
-  .reassurance-box-chiffre {
-    max-width: 100%;
-    width: 100%;
-    aspect-ratio: auto;
-    min-height: 150px;
-    padding: 20px;
-
-    .box-icon svg {
-      width: 32px;
-      height: 32px;
-    }
-
-    .box-chiffre {
-      font-size: 28px;
-      min-height: 36px;
-    }
-
-    .box-label {
-      font-size: 16px;
-    }
-  }
-}
-
-// ============================================
-// RESPONSIVE - Petit Mobile (480px)
-// ============================================
-
-@media only screen and (max-width: 480px) {
-  .reassurance-boxes-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 0 5px;
-  }
-
-  .reassurance-box {
-    padding: 0;
-  }
-
-  .reassurance-box-chiffre {
-    min-height: 140px;
-    padding: 16px;
-
-    .box-chiffre {
-      font-size: 24px;
-      min-height: 32px;
-    }
-
-    .box-label {
-      font-size: 14px;
-    }
   }
 }

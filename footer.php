@@ -12,32 +12,34 @@ defined('ABSPATH') || exit;
     <section id="footer-top" class="container pb-5">
         <div class="row">
             <div class="col-sm-12 col-xl-4">
+
+                <img class="mb-4" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-footer.svg" alt="<?php bloginfo("name") ?>" />
                 <div class="logo-footer-infos">
-                    <img class="mb-4" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-footer.svg" alt="<?php bloginfo("name") ?>" />
                     <?php
                     echo render_button(array(
-                        'type'   => 'primary',
+                        'type'   => 'primary-footer',
                         'url'    => '#',
                         'text'   => 'Demander un devis',
                         'target' => '',
                     )); ?>
                     <?php
                     echo render_button(array(
-                        'type'   => 'ghost',
+                        'type'   => 'secondary-footer',
                         'url'    => '#',
                         'text'   => 'Lorem ipsum',
                         'target' => '',
                     )); ?>
 
-                    <div class="social-net-work-footer">
-                        <?php if ($networks = get_field("reseaux_sociaux", "informations_generales")): ?>
-                            <?php foreach ($networks as $network): ?>
-                                <a class="mx-2" href="<?php echo $network["url"] ?>" target="_blank">
-                                    <i class="bi bi-<?php echo $network["slug"] ?>"></i>
-                                </a>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
+                </div>
+
+                <div class="social-net-work-footer">
+                    <?php if ($networks = get_field("reseaux_sociaux", "informations_generales")): ?>
+                        <?php foreach ($networks as $network): ?>
+                            <a class="mx-2" href="<?php echo $network["url"] ?>" target="_blank">
+                                <i class="bi bi-<?php echo $network["slug"] ?>"></i>
+                            </a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-sm-12 col-xl-2">

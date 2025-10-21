@@ -1,0 +1,162 @@
+{
+  "key": "group_listing_process",
+  "title": "Listing Process",
+  "fields": [
+    {
+      "key": "field_listing_process_titre",
+      "label": "Titre composant",
+      "name": "titre",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Supporte les couleurs : [blue]Notre[/blue] méthodologie",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Notre [blue]méthodologie[/blue]",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_listing_process_chapo",
+      "label": "Chapô composant",
+      "name": "chapo",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Texte d'introduction (optionnel)",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 3,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_listing_process_items",
+      "label": "Process Items",
+      "name": "process_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Ajouter les étapes du process",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 1,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter une étape",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_process_image",
+          "label": "Image",
+          "name": "image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "parent_repeater": "field_listing_process_items"
+        },
+        {
+          "key": "field_process_titre",
+          "label": "Titre de l'étape",
+          "name": "titre",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Ex: Duis mauris sed magna massa mauris at.",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_listing_process_items"
+        },
+        {
+          "key": "field_process_texte",
+          "label": "Texte de l'étape",
+          "name": "texte",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br",
+          "parent_repeater": "field_listing_process_items"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Permet d'afficher plusieurs cards numérotées avec image, titre, et texte, au sein d'un slider",
+  "show_in_rest": 0,
+  "acfe_autosync": ["json"],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737396800
+}

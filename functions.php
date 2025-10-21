@@ -30,10 +30,11 @@ require_once 'functions/class-bootstrap5-megamenu-walker.php';
 require_once 'functions/function-render-button.php';
 require_once 'functions/function-render-category-badge.php';
 require_once 'functions/function-acf-icon-picker.php';
+require_once 'functions/hook-cpt-expertise.php';
 
 
 add_action('admin_enqueue_scripts', function ($hook) {
-    if (isset($_GET['page']) && ($_GET['page'] === 'blog_composant') || ($_GET['page'] === 'blog_category_composant'))  {
+    if (isset($_GET['page']) && (($_GET['page'] === 'blog_composant') || ($_GET['page'] === 'blog_category_composant')))  {
         wp_enqueue_editor();
         wp_enqueue_media();
         add_editor_style();

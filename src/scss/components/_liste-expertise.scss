@@ -1,0 +1,17 @@
+// ==========================================
+// Liste Expertise - Composant
+// ==========================================
+
+.liste-expertise-composant {
+  padding: 60px 0;
+  background: $bg;
+
+  @media only screen and (max-width: 991px) {
+    padding: 60px 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+}

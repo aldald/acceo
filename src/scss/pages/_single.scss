@@ -1,10 +1,13 @@
 article.single-article-content {
-  background: $bg;
+  background: $blanc;
   padding: 48px 0 80px 0;
 }
 
 a.d-block.video-shortcode {
-  margin-bottom: 24px;
+  margin-bottom: 0;
+}
+.actualites-hero-wrapper {
+  padding-bottom: 48px;
 }
 
 article.single-article-content .btn-ghost {

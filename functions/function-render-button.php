@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Render Button Helper
  * Fonction helper pour générer des boutons unifiés
@@ -52,6 +53,9 @@ function render_button($args = array())
         'secondary' => 'btn-secondary',
         'ghost'     => 'btn-ghost',
         'short'     => 'btn-short',
+        'primary-footer'     => 'btn-primary-footer',
+        'secondary-footer'     => 'btn-secondary-footer',
+
     );
 
     $btn_class = isset($btn_class_map[$type]) ? $btn_class_map[$type] : 'btn-primary';
@@ -62,6 +66,8 @@ function render_button($args = array())
         'secondary' => '#2E76B8',
         'ghost'     => 'currentColor',
         'short'     => '#ffffff',
+        'primary-footer'     => '#2E76B8',
+        'secondary-footer'     => '#2E76B8',
     );
 
     $svg_color = isset($svg_color_map[$type]) ? $svg_color_map[$type] : '#ffffff';
@@ -69,7 +75,7 @@ function render_button($args = array())
     // Construction du HTML
     ob_start();
 ?>
-    <a href="<?php echo $url; ?>" class="<?php echo $btn_class . $extra_class; ?>"<?php echo $target; ?>>
+    <a href="<?php echo $url; ?>" class="<?php echo $btn_class . $extra_class; ?>" <?php echo $target; ?>>
         <?php if ($type !== 'short' && $text) : ?>
             <span class="btn-text"><?php echo $text; ?></span>
         <?php endif; ?>

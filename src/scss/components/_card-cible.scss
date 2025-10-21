@@ -6,23 +6,31 @@
   padding: 48px 0 120px 0;
   background: $bg;
   position: relative;
-}
 
-.title-heading {
-  margin-bottom: 35px;
-
-  h2 {
-    color: $bleu-principal;
-    font-size: 42px;
-    font-weight: 600;
-    margin: 0;
+  // Pattern de fond décoratif
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url(/wp-content/uploads/2025/10/chevron-bg.png);
+    background-repeat: repeat-x;
+    background-position: 100% 85%;
+    background-size: 50px 50px;
+    z-index: 0;
+    left: 20%;
   }
-}
 
-.vous-etes-section .title-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // Title heading spécifique à cette section
+.title-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    padding: 48px 0 64px 0;
+  }
 }
 
 // ============================================
@@ -32,6 +40,10 @@
 .carrousel-navigation {
   display: flex;
   gap: 12px;
+
+  svg path {
+    stroke-width: 1.5;
+  }
 }
 
 .carrousel-btn {
@@ -61,17 +73,19 @@
 }
 
 // ============================================
-// Carrousel
+// Carrousel Container & Track
 // ============================================
 
 .carrousel-container {
   overflow: hidden;
   position: relative;
   padding: 0 20px;
+
+  @media only screen and (max-width: 1199px) {
+    margin-bottom: 0;
+  }
 }
-.carrousel-navigation svg path {
-  stroke-width: 1.5;
-}
+
 .carrousel-track {
   display: flex;
   transition: transform 0.5s ease;
@@ -97,21 +111,15 @@
   position: relative;
 
   &:hover {
+    .carte-image-wrapper img {
+      transform: scale(1.08);
+    }
   }
 }
 
-.vous-etes-section:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: url(/wp-content/uploads/2025/10/chevron-bg.png);
-  background-repeat: repeat-x;
-  background-position: 100% 85%;
-  background-size: 50px 50px;
-  z-index: 0;
-  left: 20%;
-}
+// ============================================
+// Image Carte
+// ============================================
 
 .carte-image-wrapper {
   height: 222px;
@@ -126,9 +134,9 @@
   }
 }
 
-.vous-etes-carte:hover .carte-image-wrapper img {
-  transform: scale(1.08);
-}
+// ============================================
+// Contenu Carte
+// ============================================
 
 .carte-content-wrapper {
   padding: 24px;
@@ -142,7 +150,15 @@
   margin-bottom: 0;
   line-height: 1.2;
   min-height: 58px;
+
+  @media only screen and (max-width: 1199px) {
+    font-size: 22px;
+  }
 }
+
+// ============================================
+// Bouton Secondary
+// ============================================
 
 .btn-secondary {
   display: inline-flex;
@@ -175,32 +191,13 @@
 }
 
 // ============================================
-// RESPONSIVE
+// Responsive (Breakpoints vides conservés)
 // ============================================
 
-@media only screen and (max-width: 1199px) {
-  .carte-titre-modern {
-    font-size: 22px;
-  }
-
-  .carrousel-container {
-    margin-bottom: 0;
-  }
-
-  .vous-etes-section {
-    padding: 48px 0 64px 0;
-  }
-}
-
 @media only screen and (max-width: 991px) {
+  // Breakpoint réservé pour futures modifications
 }
 
 @media only screen and (max-width: 860px) {
-}
-
-@media only screen and (max-width: 576px) {
-  .title-heading .h2,
-  .title-heading h2 {
-    font-size: 28px !important;
-  }
+  // Breakpoint réservé pour futures modifications
 }

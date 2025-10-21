@@ -1,0 +1,123 @@
+{
+    "key": "group_texte_image",
+    "title": "Texte / Image",
+    "fields": [
+        {
+            "key": "field_texte_image_titre",
+            "label": "Titre",
+            "name": "titre",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Utilisez [blue], [orange], [dark] pour colorer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_texte_image_texte",
+            "label": "Texte élément",
+            "name": "texte_element",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Contenu principal du texte",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_texte_image_image",
+            "label": "Image élément",
+            "name": "image_element",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image affichée à côté du texte",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_texte_image_position",
+            "label": "Position de l'image",
+            "name": "position_image",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choisissez si l'image doit être à gauche ou à droite du texte",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "gauche": "Image à gauche",
+                "droite": "Image à droite"
+            },
+            "default_value": "droite",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Composant pour afficher un texte avec une image à gauche ou à droite",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

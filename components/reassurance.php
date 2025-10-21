@@ -18,14 +18,16 @@ if (!$boxes || empty($boxes)) return;
 
 <div class="reassurance-section" <?php if ($background): ?>style="background-image: url(<?php echo esc_url($background); ?>);" <?php endif; ?>>
     <div class="container">
-        <div class="reassurance-wrapper">
-            <div class="reassurance-grid">
+        <div class="row align-items-start">
 
-                <!-- Colonne gauche : Titre + Contenu -->
-                <div class="title-heading">
+            <!-- Colonne gauche : Titre + Contenu - 4 colonnes -->
+            <div class="col-lg-4 col-md-12">
+                <div class="reassurance-content">
 
                     <?php if ($titre): ?>
-                        <h2><?php echo display_colored_title($titre); ?></h2>
+                        <div class="title-heading">
+                            <h2><?php echo display_colored_title($titre); ?></h2>
+                        </div>
                     <?php endif; ?>
 
                     <?php if ($contenu): ?>
@@ -34,10 +36,11 @@ if (!$boxes || empty($boxes)) return;
                         </div>
                     <?php endif; ?>
 
-
                 </div>
+            </div>
 
-                <!-- Colonne droite : Grille de boxes -->
+            <!-- Colonne droite : Grille de boxes - 7 colonnes avec offset de 1 -->
+            <div class="col-lg-7 offset-lg-1 col-md-12">
                 <div class="reassurance-boxes-grid">
 
                     <?php foreach ($boxes as $index => $box): ?>
@@ -83,8 +86,8 @@ if (!$boxes || empty($boxes)) return;
                     <?php endforeach; ?>
 
                 </div>
-
             </div>
+
         </div>
     </div>
 </div>

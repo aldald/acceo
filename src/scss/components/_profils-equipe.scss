@@ -1,0 +1,133 @@
+// ============================================
+// Profils Équipe - Composant
+// ============================================
+
+.profils-equipe-wrapper {
+  padding: 80px 0;
+  background: $blanc;
+
+  @media only screen and (max-width: 991px) {
+    padding: 80px 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 60px 0;
+  }
+}
+
+// ============================================
+// Header (Texte 8 colonnes max)
+// ============================================
+
+.profils-equipe-chapo {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $bleu-secondaire;
+  margin: 0 0 16px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+// ============================================
+// Grille des profils
+// ============================================
+
+.profils-equipe-grid {
+  margin-top: 48px;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 40px;
+  }
+}
+
+// Custom class pour 5 colonnes (2.4 colonnes chacune)
+.col-xl-2-4 {
+  @media (min-width: 1200px) {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+.profils-equipe-intro p {
+    margin: 0;
+}
+// ============================================
+// Carte Profil
+// ============================================
+
+.profil-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+
+    .profil-photo img {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// ============================================
+// Photo ronde
+// ============================================
+
+.profil-photo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: $bg;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 16px;
+  }
+}
+
+// ============================================
+// Nom et Fonction
+// ============================================
+
+.profil-nom {
+  font-size: 20px;
+  font-weight: 500;
+  color: $bleu-principal;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+.profil-fonction {
+  font-size: 14px;
+  font-weight: 500;
+  color: $bleu-secondaire;
+  line-height: 1.4;
+  margin: 0;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}

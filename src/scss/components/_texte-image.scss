@@ -1,0 +1,57 @@
+// ============================================
+// Texte / Image - Composant
+// ============================================
+
+.texte-image-wrapper {
+  padding: 60px 0 120px 0;
+  background: $bg;
+  overflow: hidden;
+
+  @media only screen and (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+}
+// ============================================
+// Image
+// ============================================
+
+.texte-image-media {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  @media only screen and (max-width: 991px) {
+    border-radius: 12px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    border-radius: 8px;
+  }
+}
+
+// ============================================
+// Ordre Mobile
+// ============================================
+
+@media only screen and (max-width: 991px) {
+  .order-lg-1 {
+    order: 1;
+  }
+
+  .order-lg-2 {
+    order: 2;
+  }
+}

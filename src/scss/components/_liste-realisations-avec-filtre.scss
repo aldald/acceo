@@ -1,0 +1,212 @@
+// ============================================
+// Liste Reqlisqtiions avec filtre - Composant
+// ============================================
+
+.liste-realisations-avec-filtre {
+  padding: 60px 0;
+  background: $bg;
+
+  @media only screen and (max-width: 991px) {
+    padding: 60px 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+}
+
+// ============================================
+// Sidebar Filtres (4 colonnes)
+// ============================================
+
+.realisations-filters-sidebar {
+  display: block;
+
+  @media only screen and (max-width: 991px) {
+    position: static;
+    margin-bottom: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+}
+
+.realisations-filters-sidebar .filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: transparent;
+  border: 2px solid $bleu-principal;
+  border-radius: 50px;
+  color: $bleu-principal;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: auto;
+
+  i,
+  svg {
+    flex-shrink: 0;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background: $vert-ascenseur;
+    color: $blanc;
+    transform: translateX(4px);
+  }
+
+  &.active {
+    background: $bleu-principal;
+    color: $blanc;
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 10px 16px;
+    font-size: 14px;
+    gap: 8px;
+
+    i,
+    svg {
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.realisations-filters-sidebar button.filter-btn {
+  background: $blanc;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: $bleu-principal;
+  border: 1px solid $bg;
+  margin-bottom: 12px;
+}
+.realisations-filters-sidebar svg path {
+  stroke: $bleu-principal;
+}
+.realisations-filters-sidebar button:hover svg path {
+  stroke: $blanc;
+}
+.realisations-filters-sidebar button.filter-btn.active svg path {
+  stroke: $blanc;
+}
+.realisations-filters-sidebar button.filter-btn.active {
+  background: $vert-ascenseur;
+  border: 1px solid $vert-ascenseur;
+  color: $blanc;
+}
+
+.realisation-category-content {
+  position: relative;
+  background: $blanc;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  animation: fadeInUp 0.6s ease forwards;
+
+  // Délais d'animation progressifs
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+
+    .realisation-category-image img {
+      transform: scale(1.05);
+    }
+
+    .btn-short {
+      background: $bleu-secondaire;
+      transform: translateX(0) scale(1.1);
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    animation: fadeInUpMobile 0.4s ease forwards;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+}
+
+.realisation-category-card {
+  border-radius: 12px;
+  background: $bg_fonce;
+}
+.logo-realisation img {
+  max-width: 116px;
+  margin: auto;
+  display: block;
+  padding: 16px;
+  border-radius: 8px;
+  background: $blanc;
+}
+.logo-realisation {
+  padding: 20px;
+}
+.realisation-category-content {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;
+  background: $blanc;
+  min-height: 110px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 767px) {
+    padding: 20px;
+  }
+}
+
+.realisation-category-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1;
+
+  a {
+    color: $bleu-principal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $bleu-secondaire;
+    }
+  }
+}

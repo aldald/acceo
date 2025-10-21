@@ -80,7 +80,8 @@ if (empty($realisations_avec_temoignage)) return;
                 }
             ?>
 
-                <div class="temoignage-carte" data-slide="<?php echo $temoignage_count; ?>">
+                <!-- Chaque témoignage sur 6 colonnes (largeur équivalente) -->
+                <div class="temoignage-carte col-lg-6" data-slide="<?php echo $temoignage_count; ?>">
 
                     <div class="header-temoignage">
                         <?php if ($logo): ?>

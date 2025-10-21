@@ -1,0 +1,100 @@
+// ============================================
+// Témoignage - Composant
+// ============================================
+
+.temoignage-composant {
+  padding: 80px 0;
+
+  @media only screen and (max-width: 991px) {
+    padding: 60px 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+}
+
+// ============================================
+// Colonne Contenu (Gauche)
+// ============================================
+
+.temoignage-content {
+  padding-right: 40px;
+
+  @media only screen and (max-width: 991px) {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+
+// Auteur
+.temoignage-composant .temoignage-auteur {
+  margin-bottom: 15px;
+  padding: 0;
+  border: none;
+}
+
+.auteur-nom {
+  font-size: 20px;
+  font-weight: 500;
+  color: $bleu-principal;
+  margin: 0 0 8px 0;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.auteur-fonction {
+  font-size: 14px;
+  color: $bleu-secondaire;
+  margin: 0;
+  font-weight: 500;
+}
+
+// Texte témoignage
+.temoignage-texte {
+  position: relative;
+  padding-left: 30px;
+  border-left: 4px solid $bleu-secondaire;
+
+  p {
+    font-style: italic;
+
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    padding-left: 20px;
+    border-left-width: 3px;
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+}
+
+// ============================================
+// Colonne Image (Droite)
+// ============================================
+
+.temoignage-image {
+  position: relative;
+  width: 100%;
+  padding-left: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding-left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

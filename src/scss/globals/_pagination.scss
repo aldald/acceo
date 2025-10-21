@@ -1,62 +1,122 @@
-a.page-link {
-  width: 56px;
-  height: 56px;
-  background: $blanc;
-  border: none;
-  border-radius: 50%;
-  color: $bleu-principal;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border: 1px solid $bleu-principal;
+// ==========================================
+// Pagination
+// ==========================================
+li.page-item.disabled {
+  cursor: not-allowed;
 }
-
-li.page-item.active {
-  width: 56px;
-  height: 56px;
-  background: $bleu-principal;
-  border: none;
-  border-radius: 50%;
-  color: $blanc;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border: 1px solid $bleu-principal;
-}
-
 ul.pagination {
   margin-top: 24px;
   margin-bottom: 0;
   display: flex;
   justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 0;
   gap: 32px;
-}
-span.page-link.current {
-  background: none;
-  border: none;
-}
 
-a.btn.btn-nav.btn-prev,
-a.btn.btn-nav.btn-next {
-  width: 56px;
-  height: 56px;
-  background: $bleu-principal;
-  border: none;
-  border-radius: 50%;
-  color: $blanc;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border: 1px solid $bleu-principal;
-}
-
-ul.pagination svg path {
+  svg path {
     stroke-width: 1.5;
+  }
+
+  // ==========================================
+  // Items de pagination
+  // ==========================================
+
+  li.page-item {
+    // Page active
+    &.active {
+      width: 56px;
+      height: 56px;
+      background: $bleu-principal;
+      border: 1px solid $bleu-principal;
+      border-radius: 50%;
+      color: $blanc;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      span.page-link.current {
+        background: none;
+        border: none;
+      }
+    }
+
+    &.disabled {
+      span.btn-nav {
+        width: 56px;
+        height: 56px;
+        background: #cbd5e1;
+        border: 1px solid #cbd5e1;
+        border-radius: 50%;
+        color: #94a3b8;
+        cursor: not-allowed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        pointer-events: none;
+
+        &:hover {
+          background: #cbd5e1;
+          border-color: #cbd5e1;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  // ==========================================
+  // Liens de pagination (numéros)
+  // ==========================================
+
+  a.page-link {
+    width: 56px;
+    height: 56px;
+    background: $blanc;
+    border: 1px solid $bleu-principal;
+    border-radius: 50%;
+    color: $bleu-principal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $bleu-principal;
+      color: $blanc;
+    }
+  }
+
+  // ==========================================
+  // Boutons navigation (flèches)
+  // ==========================================
+
+  a.btn.btn-nav {
+    &.btn-prev,
+    &.btn-next {
+      width: 56px;
+      height: 56px;
+      background: $bleu-principal;
+      border: 1px solid $bleu-principal;
+      border-radius: 50%;
+      color: $blanc;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      svg,
+      svg path {
+        stroke: $blanc;
+      }
+
+      &:hover {
+        background: $bleu-secondaire;
+        border-color: $bleu-secondaire;
+        transform: scale(1.05);
+      }
+    }
+  }
 }

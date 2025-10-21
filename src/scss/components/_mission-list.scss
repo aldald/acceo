@@ -1,5 +1,5 @@
 // ============================================
-// Mission List - Composant
+// Mission List - Style 1 (Par défaut)
 // ============================================
 
 .missions-section {
@@ -10,6 +10,16 @@
   background-position: top right;
   overflow: hidden;
   z-index: 0;
+
+  @media only screen and (max-width: 1199px) {
+    padding: 80px 0;
+    background-image: none !important;
+    background: $bg;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 60px 0;
+  }
 }
 
 // ============================================
@@ -18,6 +28,26 @@
 
 .mission-image-mobile {
   display: none;
+
+  @media only screen and (max-width: 1199px) {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    border-radius: 8px;
+  }
 }
 
 // ============================================
@@ -32,30 +62,29 @@
   color: $bleu-secondaire;
   margin: 0 0 12px 0;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
-.missions-titre {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 40px 0;
-  color: $bleu-principal;
-  font-family: "Montserrat", sans-serif;
+.mission-category-content {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.mission-category-image {
+  position: relative;
+  width: 100%;
+  height: 184px;
+  overflow: hidden;
+  background: #edf3f6;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 // ============================================
-// Grille de Missions
-// ============================================
-
-.missions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 849px;
-}
-
-// ============================================
-// Carte Mission
+// Carte Mission Style 1
 // ============================================
 
 .mission-card {
@@ -71,16 +100,56 @@
   justify-content: center;
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
+  height: 100%;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    .mission-icon-circle {
+      background: $bleu-secondaire;
+
+      svg {
+        path,
+        circle,
+        rect,
+        line,
+        polyline,
+        polygon {
+          stroke: $blanc;
+        }
+
+        &.fill-icon {
+          path,
+          circle,
+          rect {
+            fill: $blanc;
+          }
+        }
+      }
+
+      i {
+        color: $blanc;
+      }
+    }
   }
 
   // Délais d'animation
   @for $i from 1 through 12 {
     &:nth-child(#{$i}) {
       animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    min-height: auto;
+    padding: 20px;
+    animation: fadeInUpMobile 0.4s ease forwards;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
     }
   }
 }
@@ -94,6 +163,10 @@
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
+
+  @media only screen and (max-width: 767px) {
+    gap: 12px;
+  }
 }
 
 // ============================================
@@ -135,12 +208,20 @@
         transition: fill 0.3s ease;
       }
     }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 24px;
+    }
   }
 
   i {
     font-size: 28px;
     color: $bleu-secondaire;
     transition: color 0.3s ease;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 24px;
+    }
   }
 
   img {
@@ -148,32 +229,11 @@
     height: 28px;
     object-fit: contain;
   }
-}
 
-.mission-card:hover .mission-icon-circle {
-  background: $bleu-secondaire;
-
-  svg {
-    path,
-    circle,
-    rect,
-    line,
-    polyline,
-    polygon {
-      stroke: $blanc;
-    }
-
-    &.fill-icon {
-      path,
-      circle,
-      rect {
-        fill: $blanc;
-      }
-    }
-  }
-
-  i {
-    color: $blanc;
+  @media only screen and (max-width: 767px) {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
   }
 }
 
@@ -188,6 +248,14 @@
   line-height: 1.2;
   margin: 0;
   flex: 1;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 18px;
+  }
 }
 
 .mission-body {
@@ -204,6 +272,10 @@
   color: $bleu-principal;
   margin: 0;
   flex: 1;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 13px;
+  }
 }
 
 // ============================================
@@ -245,10 +317,104 @@
     background: darken($bleu-secondaire, 10%);
     transform: translateX(4px);
   }
+
+  @media only screen and (max-width: 767px) {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
 }
 
 // ============================================
-// Animation Desktop
+// Mission List - Style 2 (Grid 3 colonnes avec images)
+// ============================================
+
+.missions-section--style-2 {
+  padding: 0 0 60px 0;
+  background: $bg;
+
+  @media only screen and (max-width: 991px) {
+    padding: 0 0 40px 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 0 0 40px 0;
+  }
+
+  // Titre section
+  .title-heading {
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .missions-chapo {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $bleu-secondaire;
+    margin: 0 0 12px 0;
+  }
+}
+
+// ============================================
+// Carte Mission Style 2
+// ============================================
+
+.mission-card-style-2 {
+  position: relative;
+  background: $blanc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+
+  // Délais d'animation progressifs
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+    .mission-card-image img {
+      transform: scale(1.05);
+    }
+
+    .btn-short {
+      background: $bleu-secondaire;
+      transform: translateX(0) scale(1.1);
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    animation: fadeInUpMobile 0.4s ease forwards;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+}
+
+// ============================================
+// Animations
 // ============================================
 
 @keyframes fadeInUp {
@@ -262,130 +428,6 @@
   }
 }
 
-// ============================================
-// RESPONSIVE - Mobile (< 1200px)
-// ============================================
-
-@media only screen and (max-width: 1199px) {
-  .missions-section {
-    padding: 80px 0;
-    background-image: none !important;
-    background: $bg;
-  }
-
-  // Afficher l'image mobile
-  .mission-image-mobile {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-    }
-  }
-
-  // Ajustements titre
-  .missions-titre {
-    font-size: 42px;
-    margin-bottom: 32px;
-  }
-
-  .missions-grid {
-    gap: 20px;
-  }
-}
-
-// ============================================
-// RESPONSIVE - Tablette (< 768px)
-// ============================================
-
-@media only screen and (max-width: 767px) {
-  .missions-section {
-    padding: 60px 0;
-  }
-
-  .mission-image-mobile {
-    margin-bottom: 32px;
-    border-radius: 8px;
-  }
-
-  .missions-titre {
-    font-size: 36px;
-  }
-
-  .missions-chapo {
-    text-align: center;
-  }
-
-  .missions-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .mission-card {
-    min-height: auto;
-    padding: 20px;
-
-    // Animation plus légère
-    animation: fadeInUpMobile 0.4s ease forwards;
-
-    @for $i from 1 through 12 {
-      &:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.05}s;
-      }
-    }
-  }
-
-  .mission-header {
-    gap: 12px;
-  }
-
-  .mission-icon-circle {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
-
-    svg,
-    i {
-      font-size: 24px;
-    }
-  }
-
-  .mission-titre {
-    font-size: 20px;
-  }
-
-  .btn-short {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-  }
-}
-
-// ============================================
-// RESPONSIVE - Petit Mobile (< 480px)
-// ============================================
-
-@media only screen and (max-width: 480px) {
-  .missions-titre {
-    font-size: 28px;
-  }
-
-  .mission-titre {
-    font-size: 18px;
-  }
-
-  .mission-description {
-    font-size: 13px;
-  }
-}
-
-// Animation mobile
 @keyframes fadeInUpMobile {
   from {
     opacity: 0;

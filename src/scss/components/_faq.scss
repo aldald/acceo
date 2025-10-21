@@ -1,21 +1,40 @@
-/* ===== SECTION FAQ MODERNE ===== */
+// ============================================
+// Section FAQ Moderne
+// ============================================
+
 .faq-section-modern {
-padding: 120px 0 167px 0;
-    background: $blanc;
+  padding: 120px 0 167px 0;
+  background: $blanc;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 0 top 0, left 0 bottom 0;
+  background-size: 650px 1100px, auto auto;
+
+  @media only screen and (max-width: 991px) {
+    padding: 64px 0 50px 0;
+    background-size: 650px auto, auto auto;
+    background-position: right 0 bottom 0, left 0 bottom 0;
+  }
+
+  // Row Bootstrap spacing
+  .row {
     position: relative;
-    overflow: hidden;
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 0 top 0, left 0 bottom 0;
-    background-size: 650px 1100px, auto auto;
+    z-index: 10;
+  }
 }
 
-.faq-content-modern {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  gap: 80px;
-  align-items: start;
-  position: relative;
-  z-index: 10;
+// ============================================
+// Colonne Info (4 colonnes)
+// ============================================
+
+.faq-info-modern {
+  padding-right: 20px;
+
+  @media only screen and (max-width: 991px) {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .faq-titre-modern {
@@ -25,6 +44,10 @@ padding: 120px 0 167px 0;
   margin-bottom: 34px;
   max-width: 220px;
   line-height: 1.1;
+
+  @media only screen and (max-width: 991px) {
+    max-width: 100%;
+  }
 }
 
 .faq-description-modern {
@@ -32,6 +55,12 @@ padding: 120px 0 167px 0;
   font-size: 14px;
   line-height: 1.4;
   margin-bottom: 40px;
+}
+
+.faq-cta-modern {
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 25px;
+  }
 }
 
 .faq-bouton-modern {
@@ -47,14 +76,18 @@ padding: 120px 0 167px 0;
   font-size: 1.1rem;
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
   transition: all 0.3s ease;
+
+  &:hover {
+    background: $bleu-secondaire;
+    color: $blanc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  }
 }
 
-.faq-bouton-modern:hover {
-  background: $bleu-secondaire;
-  color: $blanc;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-}
+// ============================================
+// Colonne Questions (7 colonnes)
+// ============================================
 
 .faq-questions-modern {
   width: 100%;
@@ -70,6 +103,10 @@ padding: 120px 0 167px 0;
   margin-bottom: 6px;
 }
 
+// ============================================
+// Question (bouton accordéon)
+// ============================================
+
 .faq-question-modern {
   width: 100%;
   background: $bg;
@@ -83,16 +120,28 @@ padding: 120px 0 167px 0;
   justify-content: space-between;
   transition: all 0.3s ease;
   position: relative;
-}
 
-.faq-question-modern:hover {
-  background: $bg;
-}
+  &:hover {
+    background: $bg;
 
-.faq-question-modern[aria-expanded="true"] {
-  background: $bg;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+    .faq-toggle-icon-modern {
+      background: $bleu-principal;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    background: $bg;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .faq-toggle-icon-modern {
+      background: $bleu-secondaire;
+    }
+
+    .faq-plus-vertical {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .faq-question-content {
@@ -101,6 +150,17 @@ padding: 120px 0 167px 0;
   flex-direction: row;
   gap: 20px;
   align-items: center;
+
+  .temoignage-badge {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 10;
+  }
+
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
 }
 
 .faq-categorie-modern {
@@ -121,6 +181,10 @@ padding: 120px 0 167px 0;
   font-weight: 600;
   color: $bleu-principal;
   line-height: 1.2;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 12px;
+  }
 }
 
 .faq-toggle-icon-modern {
@@ -137,21 +201,11 @@ padding: 120px 0 167px 0;
   transition: all 0.3s ease;
 }
 
-.faq-question-modern:hover .faq-toggle-icon-modern {
-  background: $bleu-principal;
-}
+// ============================================
+// Réponse (contenu accordéon)
+// ============================================
 
-.faq-question-modern[aria-expanded="true"] .faq-toggle-icon-modern {
-  background: $bleu-secondaire;
-}
-
-.faq-question-modern[aria-expanded="true"] .faq-plus-vertical {
-  transform: rotate(90deg);
-}
-
-// ===== CORRECTION POUR L'ANIMATION SANS SAUT =====
 .faq-answer-modern {
-  // Utilisation de grid au lieu de max-height pour une animation plus fluide
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
@@ -159,78 +213,47 @@ padding: 120px 0 167px 0;
   background: $bg;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
 
-.faq-answer-modern.active {
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  margin-bottom: 8px;
+  &.active {
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 8px;
+
+    .faq-answer-content-modern {
+      padding: 0 30px 30px 30px;
+      transition: padding 0.4s ease-out;
+    }
+  }
 }
 
 .faq-answer-content-modern {
-  min-height: 0; // Important pour que grid fonctionne
+  min-height: 0;
   padding: 0 30px;
   color: $bleu-principal;
   line-height: 1.4;
   font-size: 14px;
   font-weight: 500;
   background: $bg;
-  overflow: hidden; // Cache le contenu pendant l'animation
+  overflow: hidden;
+
+  p {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
-// Ajout de padding en animation pour éviter le saut
-.faq-answer-modern.active .faq-answer-content-modern {
-  padding: 0 30px 30px 30px;
-  transition: padding 0.4s ease-out;
-}
+// ============================================
+// Éléments de décoration
+// ============================================
 
-.faq-answer-content-modern p {
-  margin-bottom: 1rem;
-}
-
-.faq-answer-content-modern p:last-child {
-  margin-bottom: 0;
-}
-
-// ===== ÉLÉMENTS DE DÉCORATION =====
 .faq-decoration-triangle {
   width: 100%;
   height: 100%;
   background: $jaune-accessibilite;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   opacity: 0.1;
-}
-
-
-.faq-question-content .temoignage-badge {
-  position: relative;
-  top: auto;
-  right: auto;
-  z-index: 10;
-}
-
-// ===== RESPONSIVE =====
-@media only screen and (max-width: 991px) {
-  .faq-content-modern {
-    display: block;
-  }
-  
-  .faq-cta-modern {
-    margin-bottom: 25px;
-  }
-
-  .faq-section-modern {
-    padding: 64px 0 50px 0;
-  }
-  
-  .faq-question-content {
-    display: block;
-  }
-  
-  .faq-question-text-modern {
-    margin-top: 12px;
-  }
-
-
 }

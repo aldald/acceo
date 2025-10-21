@@ -1,0 +1,135 @@
+{
+  "key": "group_temoignage",
+  "title": "Témoignage",
+  "fields": [
+    {
+      "key": "field_temoignage_titre",
+      "label": "Titre",
+      "name": "titre",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Titre du composant",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Témoignage",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_temoignage_nom",
+      "label": "Nom de la personne",
+      "name": "nom",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "Ex: John Doe",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_temoignage_fonction",
+      "label": "Fonction",
+      "name": "fonction",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "Ex: Directeur Général",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_temoignage_contenu",
+      "label": "Contenu du témoignage",
+      "name": "contenu",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "Le texte du témoignage",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_temoignage_image",
+      "label": "Photo ",
+      "name": "image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Image ",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Affiche un témoignage avec photo (Layout offset)",
+  "show_in_rest": 0,
+  "acfe_autosync": ["json"],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737396800
+}

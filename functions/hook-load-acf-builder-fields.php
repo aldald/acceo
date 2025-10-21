@@ -78,6 +78,20 @@ add_action('acf/include_fields', function () {
                                 'value' => 'blog_category_composant',
                             ),
                         ),
+                        array(
+                            array(
+                                'param' => 'taxonomy',
+                                'operator' => '==',
+                                'value' => 'categorie_mission',
+                            ),
+                        ),
+                        array(
+                            array(
+                                'param' => 'post_type',
+                                'operator' => '==',
+                                'value' => 'realisation',
+                            ),
+                        ),
 
                     ),
                     'acfe_flexible_category' => false,
@@ -255,6 +269,20 @@ add_action('acf/include_fields', function () {
                                     'value' => 'blog_category_composant',
                                 ),
                             ),
+                            array(
+                                array(
+                                    'param' => 'taxonomy',
+                                    'operator' => '==',
+                                    'value' => 'categorie_mission',
+                                ),
+                            ),
+                            array(
+                                array(
+                                    'param' => 'post_type',
+                                    'operator' => '==',
+                                    'value' => 'realisation',
+                                ),
+                            ),
                         ),
                         'acfe_flexible_render_template' => false,
                         'acfe_flexible_render_style' => false,
@@ -312,6 +340,20 @@ add_action('acf/include_fields', function () {
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'blog_category_composant',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'categorie_mission',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'realisation',
                 ),
             ),
         ),
@@ -889,6 +931,20 @@ add_action('acf/include_fields', function () {
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'blog_category_composant',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'categorie_mission',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'realisation',
                 ),
             ),
         ),

@@ -1,0 +1,181 @@
+{
+    "key": "group_profils_equipe",
+    "title": "Profils Équipe",
+    "fields": [
+        {
+            "key": "field_profils_equipe_chapo",
+            "label": "Chapô composant",
+            "name": "chapo_composant",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Petit texte d'introduction au-dessus du titre",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Notre équipe",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_profils_equipe_titre",
+            "label": "Titre composant",
+            "name": "titre_composant",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Utilisez [blue], [orange], [dark] pour colorer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_profils_equipe_texte",
+            "label": "Texte d'introduction",
+            "name": "texte_introduction",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Description de l'équipe (optionnel)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_profils_equipe_membres",
+            "label": "Membres de l'équipe",
+            "name": "membres_equipe",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Ajoutez jusqu'à 5 profils par ligne maximum",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_profils_equipe_nom_prenom",
+            "button_label": "Ajouter un membre",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_profils_equipe_photo",
+                    "label": "Photo profil",
+                    "name": "photo_profil",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Photo ronde du membre (format carré recommandé)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_profils_equipe_nom_prenom",
+                    "label": "Nom + prénom profil",
+                    "name": "nom_prenom_profil",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Nom complet du membre",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Ex: John Doe",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_profils_equipe_fonction",
+                    "label": "Fonction profil",
+                    "name": "fonction_profil",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Poste ou fonction du membre",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Ex: Directeur Technique",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Présentation des équipes avec photo, nom, prénom et fonction. 5 profils par ligne max.",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1705000000
+}

@@ -1,7 +1,15 @@
+// ============================================
+// Footer
+// ============================================
+
 footer {
   .logo-footer-infos {
-    display: inline-block;
+    display: inline !important;
     text-align: center;
+
+    a {
+      margin-top: 15px;
+    }
   }
 
   #footer-bottom {
@@ -45,86 +53,106 @@ footer {
   }
 }
 
-@include media-breakpoint-down(sm) {
-  footer {
-    #footer-bottom {
-      height: auto;
-      padding: 16px 0;
-    }
-  }
-}
+// ============================================
+// Footer Wrapper
+// ============================================
 
 footer#footer_wrapper {
   background: $bleu-principal;
   padding-top: 64px;
+
+  ul li a,
+  h2,
+  div,
+  i {
+    color: $blanc;
+  }
+
+  ul li a,
+  div {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .h2 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  #footer-bottom {
+    height: 68px;
+    border-top: 1px solid $blanc;
+  }
+
+  .btn-primary {
+    margin-bottom: 16px;
+
+    span.btn-icon {
+      background-color: $blanc;
+    }
+  }
+
+  .btn-ghost {
+    .btn-text {
+      color: $blanc;
+      border: 1px solid $blanc;
+    }
+
+    span.btn-icon {
+      background-color: $blanc;
+      color: $bleu-secondaire;
+    }
+  }
 }
 
-#footer_wrapper ul li a,
-#footer_wrapper h2,
-#footer_wrapper div,
-#footer_wrapper i {
-  color: $blanc;
-}
+// ============================================
+// Boutons Footer
+// ============================================
 
-footer#footer_wrapper ul li a,
-footer#footer_wrapper div {
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-footer#footer_wrapper .h2 {
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 600;
-}
-
-footer #footer-bottom {
-  height: 68px;
-  border-top: 1px solid $blanc;
-}
-
-#footer_wrapper .btn-primary span.btn-icon {
-  background-color: $blanc;
-}
-
-#footer_wrapper .btn-ghost .btn-text {
-  color: $blanc;
-  border: 1px solid $blanc;
-}
-
-#footer_wrapper .btn-ghost span.btn-icon {
-  background-color: $blanc;
-  color: $bleu-secondaire;
-}
-
-#footer_wrapper .btn-primary {
-  margin-bottom: 16px;
-}
 .btns-footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+// ============================================
+// Responsive
+// ============================================
+
 @media only screen and (max-width: 991px) {
   #footer-top {
     text-align: left;
-  }
-  #footer-top .btn-primary,
-  #footer-top .btn-ghost {
-    width: 100%;
-    text-align: center;
+
+    .btn-primary,
+    .btn-ghost {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   #footer_wrapper .btn-ghost .btn-text {
     text-align: center;
   }
-  footer#footer_wrapper div,
-  footer#footer_wrapper ul li a {
-    text-align: left;
+
+  footer#footer_wrapper {
+    div,
+    ul li a {
+      text-align: left;
+    }
   }
+
   section#footer-bottom a {
     text-align: center !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  footer {
+    #footer-bottom {
+      height: auto;
+      padding: 16px 0;
+    }
   }
 }

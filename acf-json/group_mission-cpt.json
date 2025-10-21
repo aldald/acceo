@@ -1,54 +1,14 @@
 {
-    "key": "group_mission_fields",
-    "title": "Mission - Informations",
+    "key": "group_mission_cpt_fields",
+    "title": "Mission - Champs",
     "fields": [
         {
-            "key": "field_mission_titre",
-            "label": "Titre de la mission",
-            "name": "titre_mission",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Si vide, le titre du post sera utilisé",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "Ex: Gestion de copropriété",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_mission_description",
-            "label": "Description courte",
-            "name": "description_mission",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "Description affichée sur la carte (max 150 caractères recommandé)",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "Décrivez brièvement la mission...",
-            "maxlength": 200,
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
-            "key": "field_mission_icone",
+            "key": "field_mission_icon",
             "label": "Icône",
             "name": "icon_mission",
             "aria-label": "",
             "type": "icon-picker",
-            "instructions": "Choisir une icône pour la mission",
+            "instructions": "Choisir une icône pour cette mission",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -60,11 +20,11 @@
         },
         {
             "key": "field_mission_lien",
-            "label": "Lien de la page",
+            "label": "Lien",
             "name": "lien_mission",
             "aria-label": "",
             "type": "link",
-            "instructions": "Si vide, le lien du post sera utilisé",
+            "instructions": "Lien externe ou interne vers la page de la mission",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -73,6 +33,102 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_mission_titre",
+            "label": "Titre de la mission",
+            "name": "titre_mission",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre affiché dans les cartes (max 4 lignes recommandé)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_mission_description",
+            "label": "Description",
+            "name": "description_mission",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description courte de la mission (lignes multiples)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_mission_expertises_liees",
+            "label": "Expertises liées",
+            "name": "expertises_liees",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Sélectionner les expertises associées à cette mission",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "expertise"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_mission_image",
+            "label": "Image",
+            "name": "image_mission",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image principale de la mission",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -91,7 +147,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Champs pour le CPT Mission",
+    "description": "Champs personnalisés pour le CPT Mission",
     "show_in_rest": 0,
     "acfe_autosync": [
         "json"
@@ -100,5 +156,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1705000000
+    "modified": 1737400000
 }
