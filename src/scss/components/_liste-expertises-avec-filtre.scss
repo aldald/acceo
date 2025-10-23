@@ -1,0 +1,218 @@
+// ============================================
+// Liste Expertise avec filtre - Composant
+// ============================================
+
+.liste-expertises-avec-filtre {
+  padding: 60px 0;
+  background: $bg;
+
+  @media only screen and (max-width: 767px) {
+    padding: 30px 0;
+  }
+}
+
+// ============================================
+// Titre Expertise
+// ============================================
+
+h5.expertise-category-title {
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $bleu-principal;
+  }
+}
+
+// ============================================
+// Sidebar Filtres (4 colonnes)
+// ============================================
+
+.expertises-filters-sidebar {
+  display: block;
+
+  @media only screen and (max-width: 991px) {
+    position: static;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+
+  // ============================================
+  // Bouton Filtre
+  // ============================================
+
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: $blanc;
+    border: 1px solid $bg;
+    border-radius: 50px;
+    color: $bleu-principal;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: auto;
+    margin-bottom: 12px;
+
+    i,
+    svg {
+      flex-shrink: 0;
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    svg path {
+      stroke: $bleu-principal;
+      transition: stroke 0.3s ease;
+    }
+
+    &:hover {
+      background: $vert-ascenseur;
+      color: $blanc;
+      transform: translateX(4px);
+
+      svg path {
+        stroke: $blanc;
+      }
+    }
+
+    &.active {
+      background: $vert-ascenseur;
+      border: 1px solid $vert-ascenseur;
+      color: $blanc;
+
+      svg path {
+        stroke: $blanc;
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: auto;
+      flex: 0 0 auto;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 10px 16px;
+      font-size: 14px;
+      gap: 8px;
+
+      i,
+      svg {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+// ============================================
+// Contenu Catégorie Expertise
+// ============================================
+
+.expertise-category-content {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;
+  background: $blanc;
+  min-height: 115px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+
+  // Délais d'animation progressifs
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+
+    .expertise-category-image img {
+      transform: scale(1.05);
+    }
+
+    .btn-short {
+      background: $bleu-secondaire;
+      transform: translateX(0) scale(1.1);
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .expertise-category-title {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding: 16px;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    min-height: auto;
+    animation: fadeInUpMobile 0.4s ease forwards;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+}
+
+// ============================================
+// Animations
+// ============================================
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpMobile {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

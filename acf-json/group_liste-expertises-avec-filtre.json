@@ -1,0 +1,70 @@
+{
+  "key": "group_liste_expertises_avec_filtre",
+  "title": "Liste expertises avec filtre",
+  "fields": [
+    {
+      "key": "field_liste_expertises_chapo",
+      "label": "Chapô",
+      "name": "chapo",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Petit texte d'introduction (optionnel)",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "Ex: Découvrez nos expertises",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_liste_expertises_titre",
+      "label": "Titre",
+      "name": "titre",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Utilisez [blue], [orange], [dark] pour colorer",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Nos [blue]expertises[/blue]",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 2,
+      "new_lines": "br"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Affiche toutes les expertises avec filtres par catégorie",
+  "show_in_rest": 0,
+  "acfe_autosync": ["json"],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737396800
+}

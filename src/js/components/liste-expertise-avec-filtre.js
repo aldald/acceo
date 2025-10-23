@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Filtrer les expertises
             expertiseItems.forEach(item => {
-                if (filterValue === 'all' || item.classList.contains(filterValue.replace('cat-', 'cat-'))) {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';

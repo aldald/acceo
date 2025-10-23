@@ -7,6 +7,15 @@
   padding: 0 0 120px 0;
   background: $bg;
   overflow: hidden;
+
+  @media (max-width: 991px) {
+    padding: 0 0 80px 0;
+  }
+
+    @media (max-width: 767px) {
+    padding: 0 0 48px 0;
+  }
+
 }
 
 .image-grid img {
@@ -35,6 +44,7 @@
   @media (max-width: 767px) {
     gap: 20px;
   }
+
 }
 
 /* Titre */
@@ -181,6 +191,7 @@
 
   .bandeau-contact-content {
     padding: 20px;
+    margin-bottom: 12px;
   }
 
   .btn-primary .btn-text {

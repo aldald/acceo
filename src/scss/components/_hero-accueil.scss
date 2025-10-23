@@ -19,7 +19,7 @@
   }
 
   @media (max-width: 575px) {
-    padding: 60px 0 40px 0;
+    padding: 80px 0 40px 0;
   }
 }
 
@@ -182,7 +182,6 @@
 
 .hero-accueil-content,
 .hero-accueil-bg-image {
-  opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
 }
 
@@ -190,13 +189,13 @@
   animation-delay: 0.2s;
 
   @media (max-width: 991px) {
-    animation-delay: 0; // Image apparaît en premier sur mobile
+    animation-delay: 0;
   }
 }
 
 .hero-accueil-content {
   @media (max-width: 991px) {
-    animation-delay: 0.2s; // Texte apparaît après sur mobile
+    animation-delay: 0.2s;
   }
 }
 

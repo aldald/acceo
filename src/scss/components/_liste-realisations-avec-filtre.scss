@@ -61,7 +61,7 @@
   }
 
   &:hover {
-    background: $vert-ascenseur;
+    background: $vert-energie;
     color: $blanc;
     transform: translateX(4px);
   }
@@ -109,8 +109,8 @@
   stroke: $blanc;
 }
 .realisations-filters-sidebar button.filter-btn.active {
-  background: $vert-ascenseur;
-  border: 1px solid $vert-ascenseur;
+  background: $vert-energie;
+  border: 1px solid $vert-energie;
   color: $blanc;
 }
 

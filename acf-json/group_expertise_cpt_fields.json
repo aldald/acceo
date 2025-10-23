@@ -1,31 +1,15 @@
 {
-    "key": "group_expertise_cpt_fields",
+    "key": "group_expertise_fields",
     "title": "Expertise - Champs",
     "fields": [
         {
-            "key": "field_expertise_lien",
-            "label": "Lien",
-            "name": "lien",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "Lien externe ou interne vers la page de l'expertise",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_expertise_titre_expertise",
+            "key": "field_expertise_titre",
             "label": "Titre de l'expertise",
             "name": "titre_expertise",
             "aria-label": "",
             "type": "text",
-            "instructions": "Titre affiché dans les cartes (max 4 lignes recommandé)",
-            "required": 0,
+            "instructions": "Titre affiché sur la carte (si vide, utilise le titre du post)",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -39,12 +23,12 @@
             "maxlength": ""
         },
         {
-            "key": "field_expertise_image",
-            "label": "Image",
-            "name": "image",
+            "key": "field_expertise_logo",
+            "label": "Logo de l'expertise",
+            "name": "image_logo_expertise",
             "aria-label": "",
             "type": "image",
-            "instructions": "Image principale de l'expertise",
+            "instructions": "Logo affiché sur la carte d'expertise",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -62,26 +46,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_expertise_description",
-            "label": "Description",
-            "name": "description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "Description courte de l'expertise (lignes multiples)",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": "br"
         }
     ],
     "location": [
@@ -100,7 +64,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Champs personnalisés pour le CPT Expertise",
+    "description": "Champs pour le custom post type Expertise",
     "show_in_rest": 0,
     "acfe_autosync": [
         "json"
@@ -109,5 +73,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1705000000
+    "modified": 1737400000
 }

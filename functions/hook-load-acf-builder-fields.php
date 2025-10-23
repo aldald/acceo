@@ -87,9 +87,23 @@ add_action('acf/include_fields', function () {
                         ),
                         array(
                             array(
+                                'param' => 'taxonomy',
+                                'operator' => '==',
+                                'value' => 'categorie_expertise',
+                            ),
+                        ),
+                        array(
+                            array(
                                 'param' => 'post_type',
                                 'operator' => '==',
                                 'value' => 'realisation',
+                            ),
+                        ),
+                        array(
+                            array(
+                                'param' => 'post_type',
+                                'operator' => '==',
+                                'value' => 'expertise',
                             ),
                         ),
 
@@ -278,9 +292,23 @@ add_action('acf/include_fields', function () {
                             ),
                             array(
                                 array(
+                                    'param' => 'taxonomy',
+                                    'operator' => '==',
+                                    'value' => 'categorie_expertise',
+                                ),
+                            ),
+                            array(
+                                array(
                                     'param' => 'post_type',
                                     'operator' => '==',
                                     'value' => 'realisation',
+                                ),
+                            ),
+                            array(
+                                array(
+                                    'param' => 'post_type',
+                                    'operator' => '==',
+                                    'value' => 'expertise',
                                 ),
                             ),
                         ),
@@ -351,9 +379,23 @@ add_action('acf/include_fields', function () {
             ),
             array(
                 array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'categorie_expertise',
+                ),
+            ),
+            array(
+                array(
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'realisation',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'expertise',
                 ),
             ),
         ),
@@ -942,9 +984,23 @@ add_action('acf/include_fields', function () {
             ),
             array(
                 array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'categorie_expertise',
+                ),
+            ),
+            array(
+                array(
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'realisation',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'expertise',
                 ),
             ),
         ),

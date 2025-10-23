@@ -3,16 +3,19 @@
 // ============================================
 
 .texte-image-wrapper {
-  padding: 60px 0 120px 0;
+  padding: 60px 0 60px 0;
   background: $bg;
   overflow: hidden;
 
   @media only screen and (max-width: 991px) {
     padding: 40px 0;
+    .texte-image-content h2 {
+      margin-top: 32px;
+    }
   }
 
   @media only screen and (max-width: 767px) {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 }
 // ============================================

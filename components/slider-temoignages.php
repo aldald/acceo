@@ -14,6 +14,7 @@ $slider_titre = get_sub_field('slider_temoignages_titre');
 $slider_cta = get_sub_field('slider_temoignages_cta');
 $realisations_ids = get_sub_field('slider_temoignages_selecteur');
 
+
 if (!$realisations_ids || empty($realisations_ids)) return;
 
 $realisations_avec_temoignage = array_filter($realisations_ids, function ($id) {
@@ -105,7 +106,23 @@ if (empty($realisations_avec_temoignage)) return;
                     </div>
 
                     <div class="footer-temoignage">
-                        <div class="info-temoignage"></div>
+                        <?php
+                        $auteur_nom = get_field('temoignage_auteur', $realisation_id);
+                        $auteur_fonction = get_field('temoignage_fonction', $realisation_id);
+
+                        if ($auteur_nom || $auteur_fonction): ?>
+                            <div class="info-temoignage">
+                                <div class="temoignage-auteur">
+                                    <?php if ($auteur_nom): ?>
+                                        <strong><?php echo esc_html($auteur_nom); ?></strong>
+                                    <?php endif; ?>
+
+                                    <?php if ($auteur_fonction): ?>
+                                        <span><?php echo esc_html($auteur_fonction); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
 
                         <div>
                             <?php echo render_button(array(

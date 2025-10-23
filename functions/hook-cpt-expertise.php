@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom Post Type : Expertise
  *
@@ -44,10 +45,11 @@ function register_cpt_expertise()
         'menu_icon'             => 'dashicons-awards',
         'supports'              => array('title', 'editor', 'thumbnail', 'excerpt'),
         'show_in_rest'          => true,
+
     );
 
     register_post_type('expertise', $args);
-    
+
     register_taxonomy(
         'categorie_expertise',
         'expertise',

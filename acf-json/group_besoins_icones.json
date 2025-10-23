@@ -1,0 +1,180 @@
+{
+    "key": "group_besoins_icones",
+    "title": "Besoins icônes",
+    "fields": [
+        {
+            "key": "field_besoins_icones_titre_composant",
+            "label": "Titre composant",
+            "name": "titre_composant",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Utilisez [blue], [orange], [dark] pour colorer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_besoins_icones_texte_composant",
+            "label": "Texte composant",
+            "name": "texte_composant",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Description d'introduction",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_besoins_icones_image_composant",
+            "label": "Image composant",
+            "name": "image_composant",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image à gauche (optionnel)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_besoins_icones_liste",
+            "label": "Besoins - icônes",
+            "name": "besoins_icones",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Listing des besoins, avec une image à droite et les besoins en card (non cliquable) à gauche. Chaque besoin à son icône associé.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "field_besoins_icones_titre_element",
+            "button_label": "Ajouter un besoin",
+            "rows_per_page": 20,
+"sub_fields": [
+    {
+        "key": "field_besoins_icones_icone_element",
+        "label": "Icône élément",
+        "name": "icone_element",
+        "aria-label": "",
+        "type": "icon-picker",
+        "instructions": "Choisir une icône SVG",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+            "width": "20",
+            "class": "",
+            "id": ""
+        },
+        "initial_value": "",
+        "parent_repeater": "field_besoins_icones_liste"
+    },
+    {
+        "key": "field_besoins_icones_titre_element",
+        "label": "Titre élément",
+        "name": "titre_element",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Titre du besoin",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+            "width": "30",
+            "class": "",
+            "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": "",
+        "parent_repeater": "field_besoins_icones_liste"
+    },
+    {
+        "key": "field_besoins_icones_texte_element",
+        "label": "Texte composant",
+        "name": "texte_composant",
+        "aria-label": "",
+        "type": "textarea",
+        "instructions": "Description du besoin",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "maxlength": "",
+        "rows": 4,
+        "new_lines": "br",
+        "parent_repeater": "field_besoins_icones_liste"
+    }
+]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Listing des besoins avec icônes à droite",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1737500000
+}

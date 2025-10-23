@@ -78,15 +78,20 @@
   width: 100%;
   height: 184px;
   overflow: hidden;
-  background: #edf3f6;
+  background: $bg;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
 
-// ============================================
-// Carte Mission Style 1
-// ============================================
-
+.mission-icon {
+  background: $bg;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
 .mission-card {
   background: $blanc;
   border-radius: 12px;
@@ -98,7 +103,6 @@
   flex-direction: column;
   min-height: 228px;
   justify-content: center;
-  opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
   height: 100%;
 
@@ -357,59 +361,6 @@
     letter-spacing: 1px;
     color: $bleu-secondaire;
     margin: 0 0 12px 0;
-  }
-}
-
-// ============================================
-// Carte Mission Style 2
-// ============================================
-
-.mission-card-style-2 {
-  position: relative;
-  background: $blanc;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  animation: fadeInUp 0.6s ease forwards;
-
-  // Délais d'animation progressifs
-  @for $i from 1 through 12 {
-    &:nth-child(#{$i}) {
-      animation-delay: #{$i * 0.1}s;
-    }
-  }
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-
-    .mission-card-image img {
-      transform: scale(1.05);
-    }
-
-    .btn-short {
-      background: $bleu-secondaire;
-      transform: translateX(0) scale(1.1);
-    }
-  }
-
-  img {
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 767px) {
-    animation: fadeInUpMobile 0.4s ease forwards;
-
-    @for $i from 1 through 12 {
-      &:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.05}s;
-      }
-    }
   }
 }
 
