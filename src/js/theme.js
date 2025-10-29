@@ -13,8 +13,11 @@ import "./components/megamenu.js";
 // Templates de pages
 import { initActualitesListePage } from "./pages/actualites-liste.js";
 import "./components/liste-realisations-avec-filtre.js";
-import  "./components/liste-expertise-avec-filtre.js";
+import "./components/liste-expertise-avec-filtre.js";
 import { initListingProcess } from "./components/listing-process.js";
+import { initFriseChronologique } from "./components/frise-chronologique.js";
+import { initOngletAccordion } from "./components/onglet-accordion.js";
+import { initChiffresCles } from "./components/chiffres-cles.js";
 
 // Initialisation au chargement du DOM
 document.addEventListener("DOMContentLoaded", function () {
@@ -42,9 +45,21 @@ document.addEventListener("DOMContentLoaded", function () {
     initFAQAccordion();
   }
 
-
   if (document.querySelector(".carrousel-track-process")) {
     initListingProcess();
+  }
+
+  if (document.querySelector(".frise-chronologique-section")) {
+    initFriseChronologique();
+  }
+
+  // Onglet Accordéon à propos
+  if (document.querySelector(".onglet-accordion-section")) {
+    initOngletAccordion();
+  }
+
+  if (document.querySelector(".chiffres-cles-section")) {
+    initChiffresCles();
   }
   // ============================================
   // TEMPLATES DE PAGES

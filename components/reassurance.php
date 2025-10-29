@@ -50,9 +50,17 @@ if (!$boxes || empty($boxes)) return;
                             <!-- BOX TYPE : Chiffre clé -->
                             <div class="reassurance-box reassurance-box-chiffre" data-box-index="<?php echo $index; ?>">
 
-                                <?php if (!empty($box['icone'])): ?>
+                                <?php if (!empty($box['icone'])):
+                                    $icone = $box['icone'];
+                                ?>
                                     <div class="box-icon">
-                                        <?php the_icon($box['icone']); ?>
+                                        <?php if ($icone['mime_type'] === 'image/svg+xml'): ?>
+                                            <?php get_inline_svg($box['icone'], $box['label']); ?>
+                                        <?php else: ?>
+                                            <img src="<?php echo esc_url($icone['url']); ?>"
+                                                alt="<?php echo esc_attr($box['label']); ?>"
+                                                loading="lazy">
+                                        <?php endif; ?>
                                     </div>
                                 <?php endif; ?>
 

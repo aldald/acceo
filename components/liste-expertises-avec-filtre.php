@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Composant : Liste Réalisations avec filtre
- * Affiche toutes les réalisations avec filtres par catégorie (Layout 4/8)
+ * Composant : Liste Expertises avec filtre
+ * Affiche toutes les expertises avec filtres par catégorie (Layout 4/8)
  *
  * @package churchill
  */
@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 $chapo = get_sub_field('chapo');
 $titre = get_sub_field('titre');
 
-// Récupérer TOUTES les réalisations
+// Récupérer TOUTES les expertises
 $expertises_args = array(
     'post_type' => 'expertise',
     'posts_per_page' => -1,
@@ -34,13 +34,13 @@ if ($expertises_query->have_posts()) {
     wp_reset_postdata();
 }
 
-// Si aucune réalisation trouvée, ne rien afficher
+// Si aucune expertise trouvée, ne rien afficher
 if (empty($expertises_ids)) {
     return;
 }
 
 /**
- * Récupérer les catégories de réalisation (pour les filtres)
+ * Récupérer les catégories d'expertise (pour les filtres)
  */
 $categories_expertise = array();
 
@@ -80,8 +80,14 @@ foreach ($expertises_ids as $expertise_id) {
                         $cat_icon = get_field('icon_categorie', $cat);
                     ?>
                         <button class="filter-btn" data-filter="cat-<?php echo esc_attr($cat->term_id); ?>">
-                            <?php if ($cat_icon): ?>
-                                <?php the_icon($cat_icon); ?>
+                            <?php if ($cat_icon && !empty($cat_icon)): ?>
+                                <?php if ($cat_icon['mime_type'] === 'image/svg+xml'): ?>
+                                    <?php get_inline_svg($cat_icon, $cat->name); ?>
+                                <?php else: ?>
+                                    <img src="<?php echo esc_url($cat_icon['url']); ?>"
+                                        alt="<?php echo esc_attr($cat->name); ?>"
+                                        loading="lazy">
+                                <?php endif; ?>
                             <?php endif; ?>
                             <?php echo esc_html($cat->name); ?>
                         </button>
@@ -89,11 +95,11 @@ foreach ($expertises_ids as $expertise_id) {
                 </div>
             </div>
 
-            <!-- Colonne Grille Réalisations - 8 colonnes -->
+            <!-- Colonne Grille Expertises - 8 colonnes -->
             <div class="col-lg-8 col-md-12">
                 <div class="expertises-grid row">
                     <?php foreach ($expertises_ids as $expertise_id):
-                        // Récupérer les catégories de cette réalisation
+                        // Récupérer les catégories de cette expertise
                         $expertise_categories = get_the_terms($expertise_id, 'categorie_expertise');
                         $cat_classes = '';
 
@@ -103,13 +109,13 @@ foreach ($expertises_ids as $expertise_id) {
                             }
                         }
 
-                        // Récupérer les données de la réalisation
-                        $titre_expertise = get_field('titre_expertise',$expertise_id);
+                        // Récupérer les données de l'expertise
+                        $titre_expertise = get_field('titre_expertise', $expertise_id);
                         $lien_expertise = get_permalink($expertise_id);
                     ?>
                         <div class="col-lg-6 col-md-6 col-12 expertise-item<?php echo esc_attr($cat_classes); ?>">
                             <article class="expertise-category-card">
-                                
+
                                 <!-- Contenu de la carte -->
                                 <div class="expertise-category-content">
 

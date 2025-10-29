@@ -11,7 +11,7 @@ section.hero-section {
   overflow: hidden;
   display: flex;
   align-items: center;
-background-color: $bg;
+  background-color: $bg;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,12 +29,12 @@ background-color: $bg;
   }
 
   @media (max-width: 991px) {
-    padding: 100px 0 48px 0;
+    padding: 100px 0 10px 0;
     min-height: auto;
   }
 
   @media (max-width: 575px) {
-    padding: 100px 0 48px 0;
+    padding: 100px 0 10px 0;
   }
 }
 
@@ -80,7 +80,7 @@ background-color: $bg;
   @media (max-width: 991px) {
     padding-right: 0;
     margin-bottom: 40px;
-    }
+  }
 }
 
 .hero-title {
@@ -186,10 +186,16 @@ background-color: $bg;
 
 @media (max-width: 991px) {
   .hero-content {
-    order: 1;
+    order: 2;
   }
 
   .hero-media {
-    order: 2;
+    order: 1;
   }
+  .hero-wrapper .row {
+    flex-direction: column-reverse;
+  }
+  .hero-title {
+        margin-top: 30px;
+    }
 }

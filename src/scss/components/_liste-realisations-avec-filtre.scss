@@ -1,5 +1,5 @@
 // ============================================
-// Liste Reqlisqtiions avec filtre - Composant
+// Liste Réalisations avec filtre - Composant
 // ============================================
 
 .liste-realisations-avec-filtre {
@@ -25,9 +25,25 @@
   @media only screen and (max-width: 991px) {
     position: static;
     margin-bottom: 40px;
+    
+    // ⭐ SLIDING HORIZONTAL RESPONSIVE
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+    margin-left: -20px;
+    padding: 0 20px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 767px) {
@@ -74,6 +90,8 @@
   @media only screen and (max-width: 991px) {
     width: auto;
     flex: 0 0 auto;
+    flex-shrink: 0; // ⭐ IMPORTANT pour le sliding
+    scroll-snap-align: start; // ⭐ IMPORTANT pour le sliding
   }
 
   @media only screen and (max-width: 767px) {
@@ -99,15 +117,19 @@
   border: 1px solid $bg;
   margin-bottom: 12px;
 }
+
 .realisations-filters-sidebar svg path {
   stroke: $bleu-principal;
 }
+
 .realisations-filters-sidebar button:hover svg path {
   stroke: $blanc;
 }
+
 .realisations-filters-sidebar button.filter-btn.active svg path {
   stroke: $blanc;
 }
+
 .realisations-filters-sidebar button.filter-btn.active {
   background: $vert-energie;
   border: 1px solid $vert-energie;
@@ -164,6 +186,7 @@
   border-radius: 12px;
   background: $bg_fonce;
 }
+
 .logo-realisation img {
   max-width: 116px;
   margin: auto;
@@ -172,9 +195,11 @@
   border-radius: 8px;
   background: $blanc;
 }
+
 .logo-realisation {
   padding: 20px;
 }
+
 .realisation-category-content {
   padding: 20px;
   display: flex;

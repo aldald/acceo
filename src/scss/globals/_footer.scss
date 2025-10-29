@@ -146,6 +146,10 @@ footer#footer_wrapper {
   section#footer-bottom a {
     text-align: center !important;
   }
+  .footer-info i {
+    float: left;
+    padding-right: 12px;
+  }
 }
 
 @include media-breakpoint-down(sm) {

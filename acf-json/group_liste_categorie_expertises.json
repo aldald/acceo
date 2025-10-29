@@ -1,0 +1,95 @@
+{
+    "key": "group_liste_categorie_expertises",
+    "title": "Liste catégorie - Expertises",
+    "fields": [
+        {
+            "key": "field_liste_cat_exp_chapo",
+            "label": "Chapô composant",
+            "name": "chapo_composant",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Petit texte d'introduction (optionnel)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ex: Découvrez",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_liste_cat_exp_titre",
+            "label": "Titre composant",
+            "name": "titre_composant",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Utilisez [blue], [orange], [dark] pour colorer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nos grandes catégories [blue]d'expertises[/blue]",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_liste_cat_exp_categories",
+            "label": "Catégories d'expertise à afficher",
+            "name": "categories_expertise",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Sélectionnez les catégories d'expertise à afficher (4 cards par colonne)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "categorie_expertise",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Composant pour afficher les catégories d'expertise avec leurs expertises associées",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1737915600
+}

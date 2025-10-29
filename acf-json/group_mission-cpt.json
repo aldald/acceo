@@ -4,11 +4,11 @@
     "fields": [
         {
             "key": "field_mission_icon",
-            "label": "Icône",
+            "label": "Icône SVG",
             "name": "icon_mission",
             "aria-label": "",
-            "type": "icon-picker",
-            "instructions": "Choisir une icône pour cette mission",
+            "type": "image",
+            "instructions": "Uploader un fichier SVG pour cette mission",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,7 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "initial_value": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_mission_lien",

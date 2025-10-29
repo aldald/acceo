@@ -1,0 +1,123 @@
+{
+  "key": "group_onglet_accordeon",
+  "title": "Onglet Accordion",
+  "fields": [
+    {
+      "key": "field_onglet_accordeon_image",
+      "label": "Image de gauche",
+      "name": "onglet_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Image affichée à gauche des accordéons",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_onglet_accordeon_elements",
+      "label": "Onglets (Accordéons)",
+      "name": "onglet_elements",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Ajoutez vos onglets accordéons",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 1,
+      "max": 0,
+      "collapsed": "field_onglet_titre_element",
+      "button_label": "Ajouter un onglet",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_onglet_titre_element",
+          "label": "Titre de l'onglet",
+          "name": "titre_element",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Ex: Notre mission, Nos ambitions",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Ex: Notre mission",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_onglet_accordeon_elements"
+        },
+        {
+          "key": "field_onglet_texte_element",
+          "label": "Texte / Contenu",
+          "name": "texte_element",
+          "aria-label": "",
+          "type": "wysiwyg",
+          "instructions": "Contenu de l'onglet",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "tabs": "all",
+          "toolbar": "basic",
+          "media_upload": 0,
+          "delay": 0,
+          "parent_repeater": "field_onglet_accordeon_elements"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Section avec accordéons et image de droite",
+  "show_in_rest": 0,
+  "acfe_autosync": [
+    "json"
+  ],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737500000
+}

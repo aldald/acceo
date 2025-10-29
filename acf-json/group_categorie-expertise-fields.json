@@ -4,11 +4,11 @@
     "fields": [
         {
             "key": "field_categorie_expertise_icon",
-            "label": "Icône de la catégorie",
+            "label": "Icône SVG de la catégorie",
             "name": "icon_categorie",
             "aria-label": "",
-            "type": "icon-picker",
-            "instructions": "Choisir une icône pour cette catégorie d'expertise",
+            "type": "image",
+            "instructions": "Uploader un fichier SVG pour cette catégorie d'expertise",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,7 +16,41 @@
                 "class": "",
                 "id": ""
             },
-            "initial_value": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_categorie_expertise_image",
+            "label": "Image de la catégorie",
+            "name": "image_categorie",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image de présentation pour cette catégorie d'expertise",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,png,webp",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -44,5 +78,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1737400000
+    "modified": 1737916800
 }

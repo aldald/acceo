@@ -19,12 +19,10 @@ if (!$image_element) return;
 
 // Classes conditionnelles selon la position
 if ($position_image === 'gauche') {
-    // Image à gauche : Image (1) → Offset (2) → Texte (3)
     $order_image = 'order-lg-1';
     $order_offset = 'order-lg-2';
     $order_text = 'order-lg-3';
 } else {
-    // Image à droite : Texte (1) → Offset (2) → Image (3)
     $order_text = 'order-lg-1';
     $order_offset = 'order-lg-2';
     $order_image = 'order-lg-3';

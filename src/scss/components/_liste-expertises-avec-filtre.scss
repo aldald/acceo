@@ -35,10 +35,24 @@ h5.expertise-category-title {
   @media only screen and (max-width: 991px) {
     position: static;
     margin-bottom: 40px;
+    
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+    margin-left: -20px;
+    padding: 0 20px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 767px) {
@@ -104,6 +118,8 @@ h5.expertise-category-title {
     @media only screen and (max-width: 991px) {
       width: auto;
       flex: 0 0 auto;
+      flex-shrink: 0;
+      scroll-snap-align: start;
     }
 
     @media only screen and (max-width: 767px) {

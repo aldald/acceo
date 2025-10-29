@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Composant : Besoins icônes
  * Listing des besoins avec icônes dans des cards
@@ -26,7 +27,7 @@ if (!$besoins_icones || empty($besoins_icones)) return;
             <!-- Colonne Gauche : Contenu texte + Image qui déborde (6 colonnes) -->
             <div class="col-lg-6 col-md-12">
                 <div class="besoins-icones-left">
-                    
+
                     <div class="besoins-icones-content">
                         <?php if ($titre_composant): ?>
                             <h2 class="besoins-icones-title">
@@ -45,8 +46,8 @@ if (!$besoins_icones || empty($besoins_icones)) return;
                     <?php if ($image_composant): ?>
                         <div class="besoins-icones-image">
                             <img src="<?php echo esc_url($image_composant['url']); ?>"
-                                 alt="<?php echo esc_attr($image_composant['alt'] ?: 'Image'); ?>"
-                                 loading="lazy">
+                                alt="<?php echo esc_attr($image_composant['alt'] ?: 'Image'); ?>"
+                                loading="lazy">
                         </div>
                     <?php endif; ?>
 
@@ -57,26 +58,28 @@ if (!$besoins_icones || empty($besoins_icones)) return;
             <div class="col-lg-6 col-md-12">
                 <div class="besoins-icones-list">
 
-                    <?php foreach ($besoins_icones as $besoin): 
+                    <?php foreach ($besoins_icones as $besoin):
                         $icone = $besoin['icone_element'];
                         $titre = $besoin['titre_element'];
                         $texte = $besoin['texte_composant'];
                     ?>
 
                         <div class="besoin-card">
-                            
+
                             <!-- Icône -->
-                            <div class="besoin-icon">
-                                <?php 
-                                if ($icone) {
-                                    the_icon($icone, array(
-                                        'class' => 'icon-svg',
-                                        'width' => 48,
-                                        'height' => 48
-                                    ));
-                                }
-                                ?>
-                            </div>
+                            <?php if ($icone): ?>
+                                <div class="besoin-icon">
+                                    <?php if ($icone['mime_type'] === 'image/svg+xml'): ?>
+                                        <?php get_inline_svg($icone, $titre); ?>
+                                    <?php else: ?>
+                                        <img src="<?php echo esc_url($icone['url']); ?>"
+                                            alt="<?php echo esc_attr($titre); ?>"
+                                            loading="lazy"
+                                            width="48"
+                                            height="48">
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
 
                             <!-- Contenu -->
                             <div class="besoin-content">

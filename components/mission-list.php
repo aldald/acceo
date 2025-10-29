@@ -73,8 +73,15 @@ if (!$missions_ids || empty($missions_ids)) return;
                                     $icon_mission = get_field('icon_mission', $mission_id);
                                     if ($icon_mission):
                                     ?>
-                                        <div class="mission-icon">
-                                            <?php the_icon($icon_mission); ?>
+                                        <div class="mission-icon-circle">
+                                            <?php if ($icon_mission['mime_type'] === 'image/svg+xml'): ?>
+
+                                                <?php get_inline_svg($icon_mission, $titre_mission); ?>
+                                            <?php else: ?>
+                                                <img src="<?php echo esc_url($icon_mission['url']); ?>"
+                                                    alt="<?php echo esc_attr($titre_mission); ?>"
+                                                    loading="lazy">
+                                            <?php endif; ?>
                                         </div>
                                     <?php endif; ?>
 

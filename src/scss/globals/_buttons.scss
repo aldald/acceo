@@ -188,6 +188,7 @@
     border: 1px solid $bleu-principal;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    text-align: center;
   }
 
   .btn-icon {
@@ -323,6 +324,12 @@
     width: 100%;
     text-align: center;
   }
+
+  .vous-etes-carte {
+    .btn-secondary {
+      justify-content: flex-end;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -333,5 +340,5 @@
   }
   .blog-card-badge {
     margin-bottom: 10px;
-}
+  }
 }

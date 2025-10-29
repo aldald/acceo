@@ -1,0 +1,164 @@
+{
+  "key": "group_chiffres_cles",
+  "title": "Chiffres Clés",
+  "fields": [
+    {
+      "key": "field_chiffres_titre",
+      "label": "Titre",
+      "name": "titre",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Utilisez [blue], [orange], [dark] pour colorer des mots. Ex: ACCEO en [blue]quelques chiffres[/blue]",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "ACCEO en\nquelques chiffres",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 3,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_chiffres_contenu",
+      "label": "Contenu / Description",
+      "name": "contenu",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "Texte descriptif des chiffres clés",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_chiffres_cards",
+      "label": "Chiffres clés",
+      "name": "cards",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Ajoutez vos chiffres clés (8 recommandés pour le design)",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 1,
+      "max": 12,
+      "collapsed": "field_chiffres_card_label",
+      "button_label": "Ajouter un chiffre",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_chiffres_card_icone",
+          "label": "Icône SVG",
+          "name": "icone",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "Uploader un fichier SVG",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "33",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "svg",
+          "preview_size": "thumbnail",
+          "parent_repeater": "field_chiffres_cards"
+        },
+        {
+          "key": "field_chiffres_card_chiffre",
+          "label": "Chiffre / Valeur",
+          "name": "chiffre",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Ex: 500, 19, 55%, 93%",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "33",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "500",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_chiffres_cards"
+        },
+        {
+          "key": "field_chiffres_card_label",
+          "label": "Label / Dénomination",
+          "name": "label",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Ex: Collaborateurs, agences",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "34",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Collaborateurs",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_chiffres_cards"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Section présentant les chiffres clés de l'entreprise",
+  "show_in_rest": 0,
+  "acfe_autosync": [
+    "json"
+  ],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737500000
+}

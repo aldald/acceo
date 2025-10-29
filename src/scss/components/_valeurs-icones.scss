@@ -1,0 +1,337 @@
+// ============================================
+// Valeurs Icônes - Section
+// ============================================
+
+.valeurs-icones-section {
+  padding: 80px 0;
+  background: $bg;
+  overflow: hidden;
+
+  @media (max-width: 991px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
+}
+
+// ============================================
+// GAUCHE : Wrapper Image + Cartes (6 colonnes)
+// ============================================
+
+.valeurs-left-wrapper {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 991px) {
+    min-height: 500px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 450px;
+  }
+
+  @media (max-width: 576px) {
+    min-height: 400px;
+  }
+}
+
+// ============================================
+// Image de Fond (centrée)
+// ============================================
+
+.valeurs-background-image {
+  position: relative;
+  width: 100%;
+  max-width: 376px;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 991px) {
+    width: 75%;
+    max-width: 450px;
+  }
+
+  @media (max-width: 767px) {
+    width: 70%;
+    max-width: 400px;
+  }
+
+  @media (max-width: 576px) {
+    width: 65%;
+    max-width: 350px;
+  }
+}
+
+// ============================================
+// Cartes Valeurs (positionnées aux 4 coins)
+// ============================================
+
+.valeur-card {
+  position: absolute;
+  background: $blanc;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+  min-width: 229px;
+  min-height: 229px;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $bleu-secondaire;
+
+    .valeur-icone svg {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 991px) {
+    min-width: 140px;
+    padding: 16px 12px;
+  }
+
+  @media (max-width: 767px) {
+    min-width: 130px;
+    padding: 14px 10px;
+  }
+
+  @media (max-width: 576px) {
+    min-width: 110px;
+    padding: 12px 8px;
+    gap: 6px;
+  }
+}
+
+// ============================================
+// Positionnement individuel des cartes
+// ============================================
+
+// Carte 1 : Top-Left (DYNAMISME)
+.valeur-card-top-left {
+  top: 0;
+  left: 0;
+
+  @media (max-width: 767px) {
+    top: 5%;
+    left: 5%;
+  }
+
+  @media (max-width: 576px) {
+    top: 8%;
+    left: 8%;
+  }
+}
+
+// Carte 2 : Top-Right (RÉCIPROCITÉ)
+.valeur-card-top-right {
+  top: 0;
+  right: 0;
+
+  @media (max-width: 767px) {
+    top: 5%;
+    right: 5%;
+  }
+
+  @media (max-width: 576px) {
+    top: 8%;
+    right: 8%;
+  }
+}
+
+// Carte 3 : Bottom-Left (PÉDAGOGIE)
+.valeur-card-bottom-left {
+  bottom: 0;
+  left: 0;
+
+  @media (max-width: 767px) {
+    bottom: 5%;
+    left: 5%;
+  }
+
+  @media (max-width: 576px) {
+    bottom: 8%;
+    left: 8%;
+  }
+}
+
+// Carte 4 : Bottom-Right (INDÉPENDANCE)
+.valeur-card-bottom-right {
+  bottom: 0;
+  right: 0;
+
+  @media (max-width: 767px) {
+    bottom: 5%;
+    right: 5%;
+  }
+
+  @media (max-width: 576px) {
+    bottom: 8%;
+    right: 8%;
+  }
+}
+
+// ============================================
+// Icônes
+// ============================================
+
+.valeur-icone {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+
+    path,
+    circle,
+    rect,
+    line,
+    polyline,
+    polygon {
+      stroke: $bleu-secondaire;
+      fill: none;
+      stroke-width: 2;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 767px) {
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (max-width: 576px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// ============================================
+// Titres des cartes
+// ============================================
+
+.valeur-titre {
+  font-size: 20px;
+  font-weight: 700;
+  color: $bleu-principal;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 11px;
+  }
+}
+
+// ============================================
+// DROITE : Contenu Texte (4 colonnes + offset 1)
+// ============================================
+
+.valeurs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 991px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 767px) {
+    gap: 20px;
+  }
+}
+
+.valeurs-texte {
+  font-size: 16px;
+  line-height: 1.8;
+  color: $bleu-principal;
+
+  p {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
+}
+
+.valeurs-cta {
+  margin-top: 8px;
+
+  @media (max-width: 767px) {
+    margin-top: 4px;
+  }
+}
+
+// ============================================
+// Animations
+// ============================================
+
+.valeur-card {
+  animation: fadeInScale 0.6s ease forwards;
+  opacity: 0;
+
+  &.valeur-card-top-left {
+    animation-delay: 0.1s;
+  }
+
+  &.valeur-card-top-right {
+    animation-delay: 0.2s;
+  }
+
+  &.valeur-card-bottom-left {
+    animation-delay: 0.3s;
+  }
+
+  &.valeur-card-bottom-right {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "key": "group_valeurs_icones",
+  "title": "Valeurs Icônes",
+  "fields": [
+    {
+      "key": "field_valeurs_icones_titre_composant",
+      "label": "Titre du composant",
+      "name": "valeurs_titre_composant",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Titre principal (supporte les couleurs [blue], [orange], [dark])",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Nos valeurs, [blue]l'excellence en tout point[/blue] au coeur de nos processus",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 3,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_valeurs_icones_texte_element",
+      "label": "Texte / Description",
+      "name": "valeurs_texte_element",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "Texte descriptif des valeurs",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_valeurs_icones_image_composant",
+      "label": "Image de fond",
+      "name": "valeurs_image_composant",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Image centrale illustrative",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_valeurs_icones_cta_composant",
+      "label": "CTA (bouton)",
+      "name": "valeurs_cta_composant",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "Bouton call-to-action",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_valeurs_cta_texte",
+          "label": "Texte du bouton",
+          "name": "texte",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Nos expertises",
+          "placeholder": "Ex: Découvrir nos valeurs",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_valeurs_cta_lien",
+          "label": "Lien du bouton",
+          "name": "lien",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "https://"
+        }
+      ]
+    },
+    {
+      "key": "field_valeurs_icones_elements",
+      "label": "Valeurs (Icônes)",
+      "name": "valeurs_icones_elements",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Ajoutez vos valeurs avec icônes (4 recommandés pour le design)",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 1,
+      "max": 6,
+      "collapsed": "field_valeurs_icone_titre",
+      "button_label": "Ajouter une valeur",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_valeurs_icone_element",
+          "label": "Icône SVG",
+          "name": "icone_element",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "Uploader un fichier SVG",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "33",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "svg",
+          "preview_size": "thumbnail"
+        },
+        {
+          "key": "field_valeurs_icone_titre",
+          "label": "Titre de la valeur",
+          "name": "titre_element",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Ex: Dynamisme, Réciprocité",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "67",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Ex: Dynamisme",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Section présentant les valeurs de l'entreprise avec icônes",
+  "show_in_rest": 0,
+  "acfe_autosync": [
+    "json"
+  ],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737500000
+}

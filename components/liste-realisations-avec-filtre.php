@@ -80,8 +80,14 @@ foreach ($realisations_ids as $realisation_id) {
                         $cat_icon = get_field('icon_categorie', $cat);
                     ?>
                         <button class="filter-btn" data-filter="cat-<?php echo esc_attr($cat->term_id); ?>">
-                            <?php if ($cat_icon): ?>
-                                <?php the_icon($cat_icon); ?>
+                            <?php if ($cat_icon && !empty($cat_icon)): ?>
+                                <?php if ($cat_icon['mime_type'] === 'image/svg+xml'): ?>
+                                    <?php get_inline_svg($cat_icon, $cat->name); ?>
+                                <?php else: ?>
+                                    <img src="<?php echo esc_url($cat_icon['url']); ?>"
+                                        alt="<?php echo esc_attr($cat->name); ?>"
+                                        loading="lazy">
+                                <?php endif; ?>
                             <?php endif; ?>
                             <?php echo esc_html($cat->name); ?>
                         </button>
@@ -104,15 +110,19 @@ foreach ($realisations_ids as $realisation_id) {
                         }
 
                         // Récupérer les données de la réalisation
-                        $titre_realisation = get_field('titre_realisation',$realisation_id);
+                        $titre_realisation = get_field('titre_realisation', $realisation_id);
                         $lien_realisation = get_permalink($realisation_id);
-                        $logo_realisation = get_field('image_logo_realisation',$realisation_id);
+                        $logo_realisation = get_field('image_logo_realisation', $realisation_id);
                     ?>
                         <div class="col-lg-6 col-md-6 col-12 realisation-item<?php echo esc_attr($cat_classes); ?>">
                             <article class="realisation-category-card">
+                                <?php if ($logo_realisation): ?>
                                     <div class="logo-realisation">
-                                        <img src="<?php echo esc_url($logo_realisation['url']) ?>" />
+                                        <img src="<?php echo esc_url($logo_realisation['url']); ?>"
+                                            alt="<?php echo esc_attr($titre_realisation); ?>"
+                                            loading="lazy">
                                     </div>
+                                <?php endif; ?>
 
                                 <!-- Contenu de la carte -->
                                 <div class="realisation-category-content">

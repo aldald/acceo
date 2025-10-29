@@ -29,11 +29,15 @@
 
 .video-texte-media {
   margin-left: auto;
-  max-width: max-content;
+  max-width: 100%;
+  max-width: fill-available;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
+
   width: 100%;
   position: relative;
 
-  @media (min-width: 981px) and (max-width: 1439px) {
+  @media (min-width: 981px) and (max-width: 1440px) {
     margin-left: clamp(24px, 4vw, 60px);
   }
 

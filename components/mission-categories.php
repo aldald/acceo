@@ -40,13 +40,12 @@ if (!$categories_ids || empty($categories_ids)) return;
                 $cat_name = $category->name;
                 $cat_description = $category->description;
                 
-                // CORRECTION : Vérifier si get_term_link retourne une erreur
                 $cat_link = get_term_link($category);
                 if (is_wp_error($cat_link)) {
-                    continue; // Skip cette catégorie si le lien est invalide
+                    continue;
                 }
                 
-                // Récupérer l'image de la catégorie (champ ACF)
+                // Récupérer l'image de la catégorie
                 $cat_image = get_field('image_categorie', 'categorie_mission_' . $cat_id);
                 
                 // Fallback : image de la première mission de cette catégorie
@@ -73,7 +72,7 @@ if (!$categories_ids || empty($categories_ids)) return;
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <article class="mission-category-card">
                         
-                        <!-- Image de la catégorie (sans lien) -->
+                        <!-- Image de la catégorie -->
                         <?php if ($cat_image): ?>
                             <div class="mission-category-image">
                                 <img src="<?php echo esc_url(is_array($cat_image) ? $cat_image['url'] : $cat_image); ?>" 

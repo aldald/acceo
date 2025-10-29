@@ -31,7 +31,7 @@ require_once 'functions/function-render-button.php';
 require_once 'functions/function-render-category-badge.php';
 require_once 'functions/function-acf-icon-picker.php';
 require_once 'functions/hook-cpt-expertise.php';
-
+require_once 'functions/function-get-inline-svg.php';
 
 add_action('admin_enqueue_scripts', function ($hook) {
     if (isset($_GET['page']) && (($_GET['page'] === 'blog_composant') || ($_GET['page'] === 'blog_category_composant'))) {

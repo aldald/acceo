@@ -110,11 +110,11 @@
                 },
                 {
                     "key": "field_reassurance_box_icone",
-                    "label": "Icône",
+                    "label": "Icône SVG",
                     "name": "icone",
                     "aria-label": "",
-                    "type": "icon-picker",
-                    "instructions": "Choisir une icône",
+                    "type": "image",
+                    "instructions": "Uploader un fichier SVG",
                     "required": 0,
                     "conditional_logic": [
                         [
@@ -130,7 +130,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "initial_value": "",
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg",
+                    "preview_size": "thumbnail",
                     "parent_repeater": "field_reassurance_boxes"
                 },
                 {

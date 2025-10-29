@@ -1,0 +1,161 @@
+{
+  "key": "group_frise_chronologique",
+  "title": "Frise chronologique",
+  "fields": [
+    {
+      "key": "field_frise_titre_composant",
+      "label": "Titre du composant",
+      "name": "frise_titre_composant",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Titre principal de la section (ex: Notre histoire)",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Notre histoire",
+      "placeholder": "Ex: Notre histoire",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_frise_elements",
+      "label": "Éléments de la frise",
+      "name": "frise_elements",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Ajoutez les étapes de votre chronologie",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 1,
+      "max": 0,
+      "collapsed": "field_frise_date_element",
+      "button_label": "Ajouter une étape",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_frise_date_element",
+          "label": "Date / Année",
+          "name": "date_element",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Année ou date de l'événement (ex: 2003)",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "33",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Ex: 2003",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_frise_titre_element",
+          "label": "Titre de l'étape",
+          "name": "titre_element",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Titre de l'événement",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "67",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Ex: Création de A2C (ACCEO Ascenseurs)",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_frise_image_element",
+          "label": "Image",
+          "name": "image_element",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "Image illustrant l'événement",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium"
+        },
+        {
+          "key": "field_frise_texte_element",
+          "label": "Texte / Description",
+          "name": "texte_element",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "Description de l'événement",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "Décrivez l'événement...",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_template",
+        "operator": "!=",
+        "value": "default"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Affiche une frise chronologique interactive avec slider",
+  "show_in_rest": 0,
+  "acfe_autosync": [
+    "json"
+  ],
+  "acfe_form": 0,
+  "acfe_display_title": "",
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1737500000
+}

@@ -1,0 +1,239 @@
+// ============================================
+// Frise Chronologique - Section
+// ============================================
+
+.frise-chronologique-section {
+  padding: 80px 0;
+  background: $bg;
+  overflow: hidden;
+
+  @media (max-width: 860px) {
+    padding: 60px 0;
+  }
+
+  .title-heading h2 {
+    text-align: center;
+  }
+}
+
+// ============================================
+// Timeline Horizontale (points + années)
+// ============================================
+
+.frise-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 60px;
+  padding: 0 20px;
+
+  // Ligne horizontale
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $bleu-principal;
+    z-index: 0;
+  }
+
+  @media (max-width: 860px) {
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 576px) {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 60px;
+    padding-bottom: 10px;
+
+    &::before {
+      left: 10px;
+      right: 10px;
+    }
+  }
+}
+
+.timeline-point {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  // Point
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $bleu-principal;
+    transition: all 0.3s ease;
+    border: 6px solid $bg;
+  }
+
+  &.active,
+  &:hover {
+    &::before {
+      background: $bleu-secondaire;
+      transform: scale(1.7);
+    }
+
+    .timeline-year {
+      color: $bleu-secondaire;
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 576px) {
+    flex-shrink: 0;
+  }
+}
+
+.timeline-year {
+  font-size: 20px;
+  font-weight: 500;
+  color: $bleu-principal;
+  transition: all 0.3s ease;
+
+  @media (max-width: 860px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}
+
+// ============================================
+// Carrousel Container
+// ============================================
+
+.frise-carrousel-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.frise-carrousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 0;
+}
+
+// ============================================
+// Carte Frise
+// ============================================
+
+.frise-carte {
+  flex: 0 0 100%;
+  width: 100%;
+
+  .row {
+    align-items: center;
+  }
+}
+
+// ============================================
+// Gauche : Date + Image (Bootstrap Grid)
+// ============================================
+
+.frise-carte-left {
+  position: relative;
+
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 30px;
+  }
+}
+
+.frise-date-grande {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    font-size: 120px;
+    font-weight: 200;
+    color: $bleu-principal;
+    opacity: 1;
+    line-height: 1;
+    z-index: 999;
+    pointer-events: none;
+
+  @media (max-width: 991px) {
+    font-size: 100px;
+    top: -30px;
+    left: -20px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 80px;
+    top: -20px;
+    left: -10px;
+  }
+}
+
+.frise-image {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+// ============================================
+// Droite : Titre + Texte (Bootstrap Grid)
+// ============================================
+
+.frise-titre-element {
+  font-size: 24px;
+  font-weight: 500;
+  color: $bleu-principal;
+  margin-bottom: 20px;
+  line-height: 1.2;
+
+  // Support du titre coloré
+  .colored {
+    color: $bleu-secondaire;
+  }
+
+  @media (max-width: 860px) {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
+}
+// ============================================
+// Navigation
+// ============================================
+
+.frise-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 576px) {
+    gap: 12px;
+  }
+}
